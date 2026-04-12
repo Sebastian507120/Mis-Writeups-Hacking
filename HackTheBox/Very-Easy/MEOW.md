@@ -23,7 +23,7 @@ La `terminal` `(o consola)` es el intérprete de comandos. A diferencia de una i
 
 ![](imagenes/Openvpn.png)
 
-El servicio que usamos para conectarnos a la vpn de Hack The Box es openvpn  el ejecutarlo es sencillo, estando en la carpeta donde descargamos la vpn de Hack The Box ejecutamos el comando :  `sudo + openvpn + nombre de la vpn` en mi caso quedaría de la siguiente manera : `sudo openvpn hackerbolt.ovpn` 
+El servicio que usamos para conectarnos a la vpn de Hack The Box es openvpn  el ejecutarlo es sencillo, estando en la carpeta donde descargamos la vpn de Hack The Box ejecutamos el comando :  `sudo openvpn nombre de la vpn` en mi caso quedaría de la siguiente manera : `sudo openvpn hackerbolt.ovpn` 
 
 > ### ✅ Tip de Conexión
 > Siempre verifica que el comando `sudo openvpn` no arroje errores de "Auth Failed".
@@ -51,3 +51,51 @@ Evidencia:
 ![](imagenes/Evidencia.png)
 
 Y utilizando el comando anteriormente explicado podemos observar que en el puerto 23 tenemos escuchando el servicio de Telnet. El escaneo de los 65,535 puertos puede tardar un poco como en este caso 1 min y medio, por eso usamos `--min-rate 5000` si queremos ir más rápido.
+
+```❯ telnet 10.129.74.105
+Trying 10.129.74.105...
+Connected to 10.129.74.105.
+Escape character is '^]'.
+root
+
+
+  █  █         ▐▌     ▄█▄ █          ▄▄▄▄
+  █▄▄█ ▀▀█ █▀▀ ▐▌▄▀    █  █▀█ █▀█    █▌▄█ ▄▀▀▄ ▀▄▀
+  █  █ █▄█ █▄▄ ▐█▀▄    █  █ █ █▄▄    █▌▄█ ▀▄▄▀ █▀█
+
+
+Meow login: root
+
+Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.4.0-77-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sun 12 Apr 2026 10:06:51 PM UTC
+
+  System load:           0.0
+  Usage of /:            41.7% of 7.75GB
+  Memory usage:          4%
+  Swap usage:            0%
+  Processes:             135
+  Users logged in:       0
+  IPv4 address for eth0: 10.129.74.105
+  IPv6 address for eth0: dead:beef::250:56ff:fe94:db14
+
+
+75 updates can be applied immediately.
+31 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+
+Last login: Mon Sep  6 15:15:23 UTC 2021 from 10.10.14.18 on pts/0
+root@Meow:~# 
+root@Meow:~# 
+```
