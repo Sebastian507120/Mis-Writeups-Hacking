@@ -16,4 +16,4 @@ Una vez dentro de la máquina, verificamos los procesos activos para asegurar qu
 probando si se sube o no se sube
 
 
-![](Pasted%20image%2020260411221354.png)
+![](imagenes/captura-meow.png)
