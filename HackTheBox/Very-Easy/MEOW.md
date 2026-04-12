@@ -41,7 +41,9 @@ Nmap (Network Mapper) es la herramienta más importante de un pentester No solo 
 > En la terminal, solemos usar `nmap -p- --open` para escanear los 65,535 puertos y ver solo los que están escuchando
 
 Respuesta: 
+
 ![](imagenes/telnet.png)
-Evidencia: 
+Evidencia:
+
 ![](imagenes/Evidencia.png)
 Y utilizando el comando anteriormente explicado podemos observar que en el puerto 23 tenemos escuchando el servicio de Telnet. El escaneo de los 65,535 puertos puede tardar un poco como en este caso 1 min y medio, por eso usamos `--min-rate 5000` si queremos ir más rápido.
