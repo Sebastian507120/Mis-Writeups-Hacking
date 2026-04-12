@@ -1,1 +1,7 @@
-En este writetup vamos a ver la solución paso a paso y bien explicada de la primera maquina que uno realiza cuando toca la plataforma de hack the box
+## Tareas Post-Explotación
+Una vez dentro de la máquina, verificamos los procesos activos para asegurar que no haya intrusos adicionales. 
+
+* **Comando:** `ps aux`
+* **Nota:** Esta máquina es ideal para practicar la enumeración básica de servicios.
+
+> ¡Prueba de sincronización exitosa! 🚀
