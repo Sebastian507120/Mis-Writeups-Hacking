@@ -1,0 +1,1 @@
+En este writetup vamos a ver la solución paso a paso y bien explicada de la primera maquina que uno realiza cuando toca la plataforma de hack the box
