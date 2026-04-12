@@ -30,6 +30,7 @@ El servicio que usamos para conectarnos a la vpn de Hack The Box es openvpn  el 
 
 
 ![](imagenes/Ping.png)
+
 El comando ping es una herramienta esencial de diagnostico de red para verificar la conectividad con un host remoto, medir el tiempo de respuesta (latencia) y detectar pérdida de paquetes. 
 
 ![](imagenes/Nmap.png)
@@ -39,6 +40,8 @@ Nmap (Network Mapper) es la herramienta más importante de un pentester No solo 
 > ## 🔍 Enumeración
 > En la terminal, solemos usar `nmap -p- --open` para escanear los 65,535 puertos y ver solo los que están escuchando
 
-Respuesta: ![](imagenes/telnet.png)
-Evidencia: ![](imagenes/Evidencia.png)
+Respuesta: 
+![](imagenes/telnet.png)
+Evidencia: 
+![](imagenes/Evidencia.png)
 Y utilizando el comando anteriormente explicado podemos observar que en el puerto 23 tenemos escuchando el servicio de Telnet. El escaneo de los 65,535 puertos puede tardar un poco como en este caso 1 min y medio, por eso usamos `--min-rate 5000` si queremos ir más rápido.
