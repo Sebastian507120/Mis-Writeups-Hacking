@@ -18,4 +18,4 @@ Los writeups están organizados por plataforma y nivel de dificultad para facili
 * **Terminal:** Kitty + Zsh (Powerlevel10k)
 
 ---
-*Si te interesa mi perfil o quieres contactarme para oportunidades en el sector de Ciberseguridad, puedes encontrarme en [LinkedIn](TU_URL_DE_LINKEDIN_AQUÍ).*
+*Si te interesa mi perfil o quieres contactarme para oportunidades en el sector de Ciberseguridad, puedes encontrarme en [LinkedIn](https://www.linkedin.com/in/juan-sebastian-diaz-mantilla-90b26b295/).*
