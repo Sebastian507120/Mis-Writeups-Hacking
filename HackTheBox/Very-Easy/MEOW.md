@@ -52,13 +52,11 @@ Evidencia:
 
 Y utilizando el comando anteriormente explicado podemos observar que en el puerto 23 tenemos escuchando el servicio de Telnet. El escaneo de los 65,535 puertos puede tardar un poco como en este caso 1 min y medio, por eso usamos `--min-rate 5000` si queremos ir más rápido.
 
-
 <details>
-
-<summary> Ver banner de bienvenida completo (Telnet) </summary>
+<summary>Ver banner de bienvenida completo (Telnet)</summary>
 
 ```bash
-telnet 10.129.76.116
+❯ telnet 10.129.76.116
 Trying 10.129.76.116...
 Connected to 10.129.76.116.
 Escape character is '^]'.
@@ -101,8 +99,7 @@ To check for new updates run: sudo apt update
 
 Last login: Mon Sep  6 15:15:23 UTC 2021 from 10.10.14.18 on pts/0
 root@Meow:~# 
+...
+```
 
-
-</details>    
-
-
+</details>
