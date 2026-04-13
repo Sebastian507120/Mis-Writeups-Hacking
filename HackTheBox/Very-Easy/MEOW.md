@@ -54,10 +54,11 @@ Y utilizando el comando anteriormente explicado podemos observar que en el puert
 
 
 <details>
+
 <summary> Ver banner de bienvenida completo (Telnet) </summary>
 
 ```text
-[❯ telnet 10.129.76.116
+❯ telnet 10.129.76.116
 Trying 10.129.76.116...
 Connected to 10.129.76.116.
 Escape character is '^]'.
@@ -101,4 +102,4 @@ To check for new updates run: sudo apt update
 Last login: Mon Sep  6 15:15:23 UTC 2021 from 10.10.14.18 on pts/0
 root@Meow:~# ]
 
-- </details>
+</details>
