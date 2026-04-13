@@ -52,6 +52,8 @@ Evidencia:
 
 Y utilizando el comando anteriormente explicado podemos observar que en el puerto 23 tenemos escuchando el servicio de Telnet. El escaneo de los 65,535 puertos puede tardar un poco como en este caso 1 min y medio, por eso usamos `--min-rate 5000` si queremos ir más rápido.
 
+![](imagenes/Root.png)
+
 <details>
 <summary>Ver banner de bienvenida completo (Telnet)</summary>
 
@@ -98,8 +100,20 @@ The list of available updates is more than a week old.
 To check for new updates run: sudo apt update
 
 Last login: Mon Sep  6 15:15:23 UTC 2021 from 10.10.14.18 on pts/0
-root@Meow:~# 
+root@Meow:~# whoami
+root
+root@Meow:~#  
 ...
 ```
 
 </details>
+
+Como podemos ver en el anterior banner cuando lo desplegamos podemos visualizar como es que nos conectamos al servicio Telnet  escribimos `telnet + la direccion ip de la máquina` cuando nos pida el usuario escribimos `root`  y en la contraseña solamente presionamos enter y ya estaremos dentro 
+
+```
+root@Meow:~# ls
+flag.txt  snap
+root@Meow:~# cat flag.txt 
+b40abdfe23665f766f9c61ecba8a4c19
+root@Meow:~# 
+```
