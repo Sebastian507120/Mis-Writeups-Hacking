@@ -52,7 +52,8 @@ Evidencia:
 
 Y utilizando el comando anteriormente explicado podemos observar que en el puerto 23 tenemos escuchando el servicio de Telnet. El escaneo de los 65,535 puertos puede tardar un poco como en este caso 1 min y medio, por eso usamos `--min-rate 5000` si queremos ir más rápido.
 
-```❯ telnet 10.129.74.105
+```
+❯ telnet 10.129.74.105
 Trying 10.129.74.105...
 Connected to 10.129.74.105.
 Escape character is '^]'.
