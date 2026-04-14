@@ -1,6 +1,8 @@
 ---
-title: Fawn
+title: FAWN
 description: Resolución de la máquina Meow de HackTheBox
+tags:
+  - Starting_Point
 ---
 - **Nombre:** FAWN
     
