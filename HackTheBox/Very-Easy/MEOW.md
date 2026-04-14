@@ -11,7 +11,7 @@ description: Resolución de la máquina Meow de HackTheBox
     
 - **IP:** `10.129.73.192`
 
-											Start
+START
 
 ![412](imagenes/Acronym%20VM.png)
 
@@ -117,3 +117,9 @@ root@Meow:~# cat flag.txt
 b40abdfe23665f766f9c61ecba8a4c19
 root@Meow:~# 
 ```
+
+Una vez obtenida la shell, iniciamos la fase de **post-explotación** realizando una enumeración local básica. Primero, ejecutamos el comando `whoami` para confirmar que contamos con privilegios de **root** . Posteriormente, mediante el comando `ls`, listamos el contenido del directorio actual e identificamos el archivo  `flag.txt`. Finalmente, empleamos `cat` para visualizar la bandera y completar el objetivo.
+
+![629](imagenes/Flag.png)
+
+💡 **Lección:** Esta máquina demuestra los riesgos de protocolos antiguos y sin cifrar como **Telnet**, y la importancia de no permitir inicios de sesión administrativos (`root`) sin credenciales robustas.
