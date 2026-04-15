@@ -67,9 +67,11 @@ Si observamos en el fragmento de texto del punto anterior justo una fila abajo d
 >## ❗Tener presente
 >Si tenemos instalada la shell **zsh** al ejecutar el comando toca ponerle una barra invertida para que el sistema no lo confunda (si tenemos una bash escribirlo como esta en la captura) el comando seria así : `ftp -\?` Como se evidencia en el siguiente fragmento de texto :
 
-<details>
-<summary>Ver ejecución del comando - (FTP)</summary>
 
+<details>
+<summary>Ver banner de bienvenida completo (Telnet)</summary>
+
+bash
 ❯ ftp -\?
 usage: ftp [-46AadefginpRtVv] [-N NETRC] [-o OUTPUT] [-P PORT] [-q QUITTIME]
            [-r RETRY] [-s SRCADDR] [-T DIR,MAX[,INC]] [-x XFERSIZE]
@@ -109,6 +111,7 @@ usage: ftp [-46AadefginpRtVv] [-N NETRC] [-o OUTPUT] [-P PORT] [-q QUITTIME]
   -v            Enable verbose and progress
   -x XFERSIZE   Set socket send and receive size to XFERSIZE
   -?            Display this help and exit
+...
 
 
 </details>
