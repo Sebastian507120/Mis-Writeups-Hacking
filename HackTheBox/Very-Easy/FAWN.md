@@ -117,7 +117,6 @@ usage: ftp [-46AadefginpRtVv] [-N NETRC] [-o OUTPUT] [-P PORT] [-q QUITTIME]
 </details>
 
 
-
 ![](imagenes/FAWN%20Question%208.png)
 
 **anonymous** El usuario que permite acceder a un servidor **FTP** sin necesidad de una cuenta registrada. Cuando nos pida el usuario al conectarnos podremos tal cual **anonymous** y cuando nos pida contraseña simplemente damos presionamos la tecla **Enter** y estaremos dentro.
