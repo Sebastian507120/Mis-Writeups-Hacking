@@ -25,15 +25,20 @@ Es el estándar para transferir archivos entre computadores en una red. Se usa p
 ![](imagenes/Port.png)
 - El puerto por el cual FTP escucha usualmente es el puerto **21**
 
+
 ![](imagenes/FAWN%20question%203.png)
+
 Así como el servicio `HTTP` tiene su versión segura que es **HTTPS**  el servicio `FTP` tiene su versión segura que es el **SFTP** la **"s"** viene de secure
 
+
 ![](imagenes/FAWN%20question%204.png)
+
 El comando `ping` es un a herramienta de diagnóstico básica para comprobar si nuestro equipo está conectado a otro dispositivo o a Internet. Funciona enviando pequeños paquetes de datos a una dirección **IP** y esperando una respuesta, nos permite medir la velocidad y verificar si hay conexión.
 
 ![](imagenes/FAWN%20question%205.png)
 
->## Entramos a la parte de enumeración donde de la mano de `Nmap` podremos  saber la versión de **FTP** que tiene nuestra maquina ejecutando el siguiente comando : `nmap -sV -p 21 10.129.78.182`
+>## 🔍 Enumeración 
+>Entramos a la parte de enumeración donde de la mano de `Nmap` podremos  saber la versión de **FTP** que tiene nuestra maquina ejecutando el siguiente comando : `nmap -sV -p 21 10.129.78.182`
 >	- (-sV) :   Le decimos a nmap que hable con el servicio y pregunte que programa hay y que versión es.
 
 Resultado: 
