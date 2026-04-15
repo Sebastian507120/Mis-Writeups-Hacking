@@ -148,5 +148,6 @@ y cuando revisemos en el directorio desde el cual nos conectamos al servicio **F
 
 ![](imagenes/FAWN%20Flag%202.0.png)
 
-Al poner el texto que nos sale en el espacio de la **Flag** en `Hack The Box` y darle verificar nos la marcará como correcta : 
+Al poner el texto que nos sale en el espacio de la **Flag** en `Hack The Box` y darle verificar nos la marcará como correcta :  
+
 ![](imagenes/FAWN%20flag.png)
