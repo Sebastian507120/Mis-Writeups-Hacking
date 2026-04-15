@@ -69,7 +69,7 @@ Si observamos en el fragmento de texto del punto anterior justo una fila abajo d
 
 
 <details>
-<summary>Ver banner de bienvenida completo (Telnet)</summary>
+<summary>Ver banner de bienvenida servicio (FTP)</summary>
 
 ```bash
 ❯ ftp -\?
