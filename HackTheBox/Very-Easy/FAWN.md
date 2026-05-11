@@ -160,3 +160,5 @@ y cuando revisemos en el directorio desde el cual nos conectamos al servicio **F
 Al poner el texto que nos sale en el espacio de la **Flag** en `Hack The Box` y darle verificar nos la marcará como correcta :  
 
 ![](imagenes/FAWN%20flag.png)
+
+Prueba de que hacer git pull o hit push 
