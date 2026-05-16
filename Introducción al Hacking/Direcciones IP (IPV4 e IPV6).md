@@ -71,4 +71,5 @@ wlx00c0cab234bd: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ```
 
-pruebaaaaa
+Prueba #2 
+![](../Capturas/Direcciones%20IP%20(IPV4%20e%20IPV6)-20260516181951.png)
