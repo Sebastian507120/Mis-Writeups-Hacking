@@ -72,4 +72,7 @@ wlx00c0cab234bd: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
 ```
 
 Prueba #2 
-![](../Capturas/Direcciones%20IP%20(IPV4%20e%20IPV6)-20260516181951.png)
+![697](../Capturas/Direcciones%20IP%20(IPV4%20e%20IPV6)-20260516181951.png)
+
+
+![](../Capturas/Direcciones%20IP%20(IPV4%20e%20IPV6)-20260516183240.png)
