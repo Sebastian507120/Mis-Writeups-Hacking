@@ -32,7 +32,7 @@ Nació exclusivamente para solucionar la falta de espacio de **IPv4** y asegurar
 
 - **Calculo de direcciones IPv6:**
 
-![[Direcciones IP (IPV4 e IPv6)  Cantidad posible de IPs IPv6.png]]
+![](Direcciones%20IP%20(IPV4%20e%20IPV6)%20Cantidad%20posible%20de%20IPs%20%20IPv6.png)
 
 - **Su ventaja:** Permite una cantidad de direcciones tan ridículamente alta que podríamos asignarle miles  de millones de **IPs** a cada persona y aun así  sobrarían.
 
