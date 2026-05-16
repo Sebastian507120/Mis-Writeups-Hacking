@@ -19,10 +19,12 @@ Es el sistema que llevamos usando toda la vida, pero tiene un problema : se qued
 
 - **Calculo hecho en Linux:** 
 
-![[Direcciones IP (IPV4 e IPv6) Cantidad direcciones IPs IPv4.png]]
+![](../../Capturas/Direcciones%20IP%20(IPV4%20e%20IPV6)-20260516183635.png)
+
 - **Número de población según countrymeters.info :**
 
-![[Direcciones IP (IPV4 e IPv6)  Poblacion_Mundial.png]]
+![](../../Capturas/Direcciones%20IP%20(IPV4%20e%20IPV6)-20260516183650-Dato-Población-Mundial.png)
+
 - **Dato clave:**  Como se logra ver en la imagen de arriba a fecha de hoy 16 de mayo de 2026 hay 8.000 millones de personas en el mundo por eso literal ya se acabaron las direcciones **IPv4** pero se creo una solución y esa solución se llama **IPv6**
 
 ## IPv6: La solución al problema
@@ -32,7 +34,7 @@ Nació exclusivamente para solucionar la falta de espacio de **IPv4** y asegurar
 
 - **Calculo de direcciones IPv6:**
 
-![](Direcciones%20IP%20(IPV4%20e%20IPV6)%20Cantidad%20posible%20de%20IPs%20%20IPv6.png)
+![](../../Capturas/Direcciones%20IP%20(IPV4%20e%20IPV6)-20260516183723-Cantidad-Posible-IPv6.png)
 
 - **Su ventaja:** Permite una cantidad de direcciones tan ridículamente alta que podríamos asignarle miles  de millones de **IPs** a cada persona y aun así  sobrarían.
 
@@ -71,8 +73,6 @@ wlx00c0cab234bd: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ```
 
-Prueba #2 
-![697](../Capturas/Direcciones%20IP%20(IPV4%20e%20IPV6)-20260516181951.png)
 
 
-![](../Capturas/Direcciones%20IP%20(IPV4%20e%20IPV6)-20260516183240.png)
+
