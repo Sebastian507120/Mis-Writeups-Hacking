@@ -138,6 +138,7 @@ Using binary mode to transfer files.
 ftp> 
 ```
 
+
 Y podemos apreciar que el código que aparece luego de entrar es : **220**
 
 ![](imagenes/FAWN%20Question%2010.png)
