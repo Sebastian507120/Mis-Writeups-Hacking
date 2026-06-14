@@ -4,7 +4,7 @@ description:
 tags:
   - Redes
 ---
-hi# 🌐 Direcciones MAC y MAC Spoofing (macchanger)
+# 🌐 Direcciones MAC y MAC Spoofing (macchanger)
 
 ## ¿Qué es una Dirección MAC? 
 
