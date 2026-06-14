@@ -1,8 +1,10 @@
 ---
 title: Direcciones MAC (OUI y NIC)
 description:
+tags:
+  - Redes
 ---
-# 🌐 Direcciones MAC y MAC Spoofing (macchanger)
+hi# 🌐 Direcciones MAC y MAC Spoofing (macchanger)
 
 ## ¿Qué es una Dirección MAC? 
 
@@ -10,7 +12,7 @@ La MAC (Media Access Control) es un identificador único asignado a la tarjeta d
 
 - Formato: Está compuesta por 48 bits (6 bytes), representados generalmente en formato hexadecimal ( 00:1A:2B:3C:4D:5E ). 
 
-![542](../Capturas/Direcciones%20MAC%20(OUI%20y%20NIC)-20260607213046.png)
+![542](../../Capturas/Direcciones%20MAC%20(OUI%20y%20NIC)-20260607213046.png)
 # 🏢 Identificación del Fabricante (OUI)
 
 La dirección MAC es rastreable porque su estructura está dividida en dos partes:
@@ -19,7 +21,7 @@ La dirección MAC es rastreable porque su estructura está dividida en dos parte
 
 2. NIC Specific:  Son los últimos 3 bytes, asignados por el propio fabricante de manera secuencial a cada dispositivo.
 
-![649](../Capturas/Direcciones%20MAC%20(OUI%20y%20NIC)-20260607232429.png)
+![649](../../Capturas/Direcciones%20MAC%20(OUI%20y%20NIC)-20260607232429.png)
 
 # 🎭 MAC Spoofing
 
@@ -40,7 +42,7 @@ Antes  de cambiar la MAC, primero debemos asegurarnos de tenerlo instalado lo ve
 
 ## Menú de macchanger : 
 
-![](../Capturas/Direcciones%20MAC%20(OUI%20y%20NIC)-20260607234521.png)
+![](../../Capturas/Direcciones%20MAC%20(OUI%20y%20NIC)-20260607234521.png)
 
 ## Comandos Principales
 
