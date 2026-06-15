@@ -1,5 +1,5 @@
 ---
-title: Protocolos de Transporte TCP vs UDP
+title: Protocolos de Transporte TCP vs UDP  & Three-Way Handshake
 description: Explicación de TCP y UDP y sus diferentes puertos
 tags:
   - Redes
@@ -8,7 +8,7 @@ tags:
 
 | Característica | TCP (Transmission Control Protocol)                                    | UDP (User Datagram Protocol)                                 |
 | :------------- | :--------------------------------------------------------------------- | :----------------------------------------------------------- |
-| Conexión       | Orientado a conexión  (establece sesión antes de enviar datos).        | No orientado a conexión (enviá datos sin previo aviso)       |
+| Conexión       | Orientado a conexión  (establece sesión antes de enviar datos).        | No orientado a conexión (envía datos sin previo aviso)       |
 | Fiabilidad     | Alta : Garantiza que todos los paquetes lleguen y en el orden correcto | Baja : No garantiza la entrega ni el orden de los paquetes   |
 | Velocidad      | Más lento (debido a la sobrecarga de control y confirmaciones).        | Muy rápido (sin comprobaciones, ideal para streaming/gaming) |
 | Mecanismo      | Utilizan Flow Control y retransmisión de paquetes perdidos.            | Envía ráfagas de datos  (Datagramas) y se olvida.            |
@@ -42,6 +42,7 @@ sequenceDiagram
 A continuación se listan los puertos más comunes identificados en las fases de escaneo          ( `Nmap`)   :
 
 ### 🔴 Puertos TCP Comunes
+
 - **21 (FTP) :** Transferencia de archivos. Suele ser vector de ataques por fuerza bruta o credenciales por defecto que los trabajadores dejan.
 - **22 (SSH) :** Gestión remota segura. Reemplaza a Telnet.
 - **23 (Telnet) :** Gestión remota en texto plano (inseguro, las credenciales viajan expuestas).
@@ -53,6 +54,7 @@ A continuación se listan los puertos más comunes identificados en las fases de
 - **443 (HTTPS) :** Tráfico web seguro con cifrado  SSL/TLS.
 
 ### 🔵 Puertos UDP Comunes
+
 - **53 (DNS) :** Resolución de nombres de dominio a IP (puede operar en TCP para transferencias de zona).
 - **67 / 68 (DHCP) :** Asignación dinámica de direcciones IP en la red.
 - **69 (TFTP) :**  Versión simple de FTP sin autenticación; común para extraer configuraciones de routers o VoIP.

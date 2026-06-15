@@ -4,7 +4,7 @@ description: Explicación de que es una  ip y los 2 tipos que existen
 tags:
   - Redes
 ---
-# ❓ ¿Que es una dirección IP?
+# ¿Que es una dirección IP?
 
 Una **Dirección IP** ( Internet Protocol )  es el número de identificación que tiene cada dispositivo en una red. Podemos compararlo a como si los dispositivos tuvieran un número de teléfono si un equipo quiere hablar con el mio, necesita marcar a mi número exacto de lo contrario no podrá comunicarse
 
@@ -25,12 +25,12 @@ Es el sistema que llevamos usando toda la vida, pero tiene un problema : se qued
 
 ![](../../Capturas/Direcciones%20IP%20(IPV4%20e%20IPV6)-20260516194340.png)
 
-- **Dato clave:**  Como se logra ver en la imagen de arriba a fecha de hoy 16 de mayo de 2026 hay 8.000 millones de personas en el mundo por eso literal ya se acabaron las direcciones **IPv4** pero se creo una solución y esa solución se llama **IPv6**
+- **Dato clave:**  Como se logra ver en la imagen de arriba a fecha de hoy 16 de mayo de 2026 hay 8.000 millones de personas en el mundo por eso literal ya se acabaron las direcciones **IPv4** pero se creo una solución y esa solución se llama **IPv6**.
 
 ## IPv6: La solución al problema
 Nació exclusivamente para solucionar la falta de espacio de **IPv4** y asegurarse de que nunca nos quedemos sin direcciones. 
 
-- **Cómo se ve:** Es mucho más larga, mezcla números y letras, y se separa por dos puntos  ( Ejemplo: `2001:0db8:85a3:8a2e`) }
+- **Cómo se ve:** Es mucho más larga, mezcla números y letras, y se separa por dos puntos  ( Ejemplo: `2001:0db8:85a3:8a2e`).
 
 - **Calculo de direcciones IPv6:**
 
