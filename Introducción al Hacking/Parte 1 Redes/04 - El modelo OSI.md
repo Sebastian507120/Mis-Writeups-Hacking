@@ -9,7 +9,7 @@ tags:
 ## ¿Qué es y por qué es importante?
 El modelo OSI es una estructura teórica de **7 capas** que describe cómo se comunican los dispositivos en una red.
 
->##📌 Relevancia en Ciberseguridad
+> ## 📌 Relevancia en Ciberseguridad
 >Comprender esta estructura permite tener una `visión completa` del flujo de datos, `aislar problemas` rápidamente e `identificar vulnerabilidades específicas` en cada nivel para aplicar las medidas de seguridad adecuadas durante un pentesting.
 
 ## 🗃️ Estructura de las 7 capas 
@@ -35,6 +35,6 @@ Para recordar cómo se construyen los paquetes cuando usamos por el modelo del 1
 - Se descifran o descomprimen los datos recibidos *(6. Presentación).
 - El software o navegador web muestra la información al usuario final *(7. Aplicación).
 
-[04 - El modelo OSI](04%20-%20El%20modelo%20OSI.md) | OSI ]]
 
- 
+
+"En este nivel trabajan las `[[02 - Direcciones MAC (OUI y NIC)|direcciones MAC]]` de la tarjeta de red." 

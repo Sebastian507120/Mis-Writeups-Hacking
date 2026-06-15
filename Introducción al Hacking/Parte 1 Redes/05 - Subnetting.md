@@ -1,0 +1,53 @@
+---
+title: Subnetting
+description: ¿Qué es y Máscaras de Red?
+tags:
+  - Redes
+---
+
+# Subnetting: ¿Qué es y Máscaras de Red?
+## 📖 ¿Qué es el Subnetting?
+El subnetting (subredes) es una técnica utilizada para dividir una red IP grande en redes lógicas más pequeñas y manejables.
+
+Para lograr esto, utilizamos las **máscaras de subred**, la cuales actúan como un filtro sobre las direcciones IP para decirle a los equipos qué parte de la dirección identifica a la red completa y qué parte identifica al host (el dispositivo específico). 
+
+
+## 🖧 La Máscara de Red y el Sistema Binario
+Una máscara de red tiene el mismo tamaño que una IPv4 (32 bits divididos en 4 octetos). Se interpreta a nivel binario:
+- **Los bits en "1":** Representan la porción de la **RED**.
+- **Los bits en "0":** Representan la porción de los **HOSTS** (dispositivos).
+
+Ejemplo : `255.255.255.0` 
+Si pasamos esto a binario, se ve así: 
+`11111111.11111111.11111111.00000000`
+(Los primeros 3 octetos definen la red, el último octeto queda libre para asignar a las computadoras).
+
+
+# 🧮 Cómo leer el Binario (El método de los Interruptores)
+Para convertir la máscara de red de binario a decimal sin enredarnos, imaginemos que cada octeto (grupo de 8 bits) es una fila de **8 interruptores de luz**.
+
+Cada interruptor tiene un valor matemático fijo de izquierda a derecha:
+**[128] - [64] - [32] - [16] - [8] - [4] - [2] - [1]** 
+
+La regla es muy simple: 
+- Si el bit es un **1**, el interruptor está **ENCENDIDO** (y sumamos su valor).
+- Si el bit es un 0, el interruptor está **APAGADO** (y lo ignoramos por completo).
+
+Ejemplo Práctico : 
+Si tenemos el binario `11000000`, lo leemos así: 
+- Encendemos el primero (vale 128).
+- Encendemos el segundo (vale 64).
+- El resto están apagados (0).
+- **Suma total:** 128 + 64 = **192**
+
+> [!tip] Truco de las Máscaras de Red (S4vitar)
+> En las máscaras de red, los "unos" (1) siempre se llenan de izquierda a derecha de forma continúa, sin dejar huecos. Esto significa que no necesitamos calculadora, porque los valores decimales **SIEMPRE** serán uno de estos números exactos:
+
+- 1 bit encendido : **128**
+- 2 bit encendido : 128 + 64 = **192**
+- 3 bit encendido : 128 + 64 + 32 = **224** 
+- 4 bit encendido : **240**
+- 5 bit encendido : **248**
+- 6 bit encendido : **252**
+- 7 bit encendido : **254**
+- 8 bit encendido : **255** (Ej: `255.255.255.0`) 
