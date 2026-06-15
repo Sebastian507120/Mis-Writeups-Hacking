@@ -51,4 +51,4 @@ Si tenemos el binario `11000000`, lo leemos así:
 - 6 bit encendido : **252**
 - 7 bit encendido : **254**
 - 8 bit encendido : **255** (Ej: `255.255.255.0`) 
--
+- ghbgfbgf
