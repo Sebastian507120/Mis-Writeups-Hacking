@@ -27,7 +27,7 @@ La `terminal` `(o consola)` es el intérprete de comandos. A diferencia de una i
 
 El servicio que usamos para conectarnos a la vpn de Hack The Box es openvpn  el ejecutarlo es sencillo, estando en la carpeta donde descargamos la vpn de Hack The Box ejecutamos el comando :  `sudo openvpn nombre de la vpn` en mi caso quedaría de la siguiente manera : `sudo openvpn hackerbolt.ovpn` 
 
-> ### ✅ Tip de Conexión
+> ✅ Tip de Conexión
 > Siempre verifica que el comando `sudo openvpn` no arroje errores de "Auth Failed".
 
 

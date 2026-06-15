@@ -10,12 +10,9 @@ tags:
 El modelo OSI es una estructura teórica de **7 capas** que describe cómo se comunican los dispositivos en una red.
 
 >##📌 Relevancia en Ciberseguridad
->Comprender esta estructura permite tener una visión completa del flujo de datos, aislar problemas rápidamente e identificar **vulnerabilidades específicas** en cada nivel para aplicar las medidas de seguridad adecuadas durante un pentesting.
+>Comprender esta estructura permite tener una `visión completa` del flujo de datos, `aislar problemas` rápidamente e `identificar **vulnerabilidades específicas**` en cada nivel para aplicar las medidas de seguridad adecuadas durante un pentesting.
 
-> [ !📌 Relevancia en Ciberseguridad ] 
-> Comprender esta estructura permite tener una visión completa del flujo de datos, aislar problemas rápidamente e identificar **vulnerabilidades específicas** en cada nivel para aplicar las medidas de seguridad adecuadas durante un pentesting.
-
-## 🗃️ Estructura de las 7 capas (Orden Ascendente: 1 a 7)
+## 🗃️ Estructura de las 7 capas 
 
 | #   | Capa            | Unidad de Datos (PDU)  | Función Principal                                              | Ejemplos / Conceptos                                    |
 | --- | --------------- | ---------------------- | -------------------------------------------------------------- | ------------------------------------------------------- |

@@ -37,7 +37,7 @@ El comando `ping` es un a herramienta de diagnóstico básica para comprobar si 
 
 ![](imagenes/FAWN%20question%205.png)
 
->## 🔍 Enumeración 
+>🔍 Enumeración 
 >Entramos a la parte de enumeración donde de la mano de `Nmap` podremos  saber la versión de **FTP** que tiene nuestra maquina ejecutando el siguiente comando : `nmap -sV -p 21 10.129.78.182`
 >	- (-sV) :   Le decimos a nmap que hable con el servicio y pregunte que programa hay y que versión es.
 
