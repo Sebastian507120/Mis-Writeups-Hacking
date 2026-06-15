@@ -40,8 +40,9 @@ Si tenemos el binario `11000000`, lo leemos así:
 - El resto están apagados (0).
 - **Suma total:** 128 + 64 = **192**
 
-> [!tip] Truco de las Máscaras de Red (S4vitar)
-> En las máscaras de red, los "unos" (1) siempre se llenan de izquierda a derecha de forma continúa, sin dejar huecos. Esto significa que no necesitamos calculadora, porque los valores decimales **SIEMPRE** serán uno de estos números exactos:
+> **💡 Truco de las Máscaras de Red (S4vitar)**
+>
+> En las máscaras de red, los "unos" (1) siempre se llenan de izquierda a derecha de forma continua, sin dejar huecos. Esto significa que no necesitamos calculadora, porque los valores decimales **SIEMPRE** serán uno de estos números exactos:
 
 - 1 bit encendido : **128**
 - 2 bit encendido : 128 + 64 = **192**
@@ -51,4 +52,3 @@ Si tenemos el binario `11000000`, lo leemos así:
 - 6 bit encendido : **252**
 - 7 bit encendido : **254**
 - 8 bit encendido : **255** (Ej: `255.255.255.0`) 
-- ghbgfbgf
