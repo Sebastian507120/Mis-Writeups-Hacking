@@ -4,13 +4,13 @@ description: ¿En qué consiste y cómo se estructura la actividad de red en cap
 tags:
   - Redes
 ---
-# 📚 El modelo OSI (Open Systems Interconnection)
+# El modelo OSI (Open Systems Interconnection)
 
 ## ¿Qué es y por qué es importante?
 El modelo OSI es una estructura teórica de **7 capas** que describe cómo se comunican los dispositivos en una red.
 
 >##📌 Relevancia en Ciberseguridad
->Comprender esta estructura permite tener una `visión completa` del flujo de datos, `aislar problemas` rápidamente e `identificar **vulnerabilidades específicas**` en cada nivel para aplicar las medidas de seguridad adecuadas durante un pentesting.
+>Comprender esta estructura permite tener una `visión completa` del flujo de datos, `aislar problemas` rápidamente e `identificar vulnerabilidades específicas` en cada nivel para aplicar las medidas de seguridad adecuadas durante un pentesting.
 
 ## 🗃️ Estructura de las 7 capas 
 
