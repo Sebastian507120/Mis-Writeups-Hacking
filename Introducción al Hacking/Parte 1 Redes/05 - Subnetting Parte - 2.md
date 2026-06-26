@@ -1,0 +1,47 @@
+---
+title: "Subnetting : CIDRs y Cálculo de Hosts"
+description: CIDRs y cálculo total de hosts
+tags:
+  - Redes
+---
+# 🏛️ Clases de Direcciones IP (El método antiguo)
+Antes de que existiera el CIDR, las redes se dividían rígidamente en "Clases". Aunque hoy en día usamos métodos más flexibles, es vital conocerlas porque definen las máscaras por defecto:
+
+| Clase | Primer Octeto | Máscara por Defecto | CIDR |     Ejemplo     |
+| :---: | :-----------: | :-----------------: | :--: | :-------------: |
+|   A   |    0 a 127    |      255.0.0.0      |  /8  |   10.52.36.11   |
+|   B   |   128 a 191   |     255.255.0.0     | /16  |  172.16.52.63   |
+|   C   |   192 a 223   |    255.255.255.0    | /24  | 192.168.123.132 |
+
+# ✂️ CIDR (Classless Inter-Domain Routing)
+Como las clases rígidas desperdiciaban muchas direcciones IP, se creó el **CIDR**. 
+Consiste en añadir una barra diagonal (`/`) seguida de un número al final de la IP. Ese número, llamada **prefijo**, nos dice exactamente **cuántos bits están en "1"** (encendidos) de izquierda a derecha.
+
+## 💡El equilibrio de los 32 bits
+Una dirección IP siempre tiene **32 bits** en total.
+Si el CIDR nos dice cuántos bits se usan para la RED, el resto (lo que falta para llegar a 32) son los bits que quedan libres par los **HOSTS** (dispositivos).
+
+## 🧮 ¿Cómo calcular el total de Hosts?
+Para saber cuántas computadores o dispositivos podemos conectar en una subred, se utiliza una fórmula matemática muy sencilla con base 2.
+
+**Fórmula:** `2^(Número de ceros)`  
+
+**Pasos para calcularlo:** 
+1. Tomamos el número total de bits de una IP (32).
+2. Le restamos el prefijo CIDR (los unos de la red). El resultado son los bits sobrantes (los ceros).
+3. Elevamos el número 2 a esa cantidad de ceros.
+
+**Ejemplos Prácticos :**
+- **Ejemplo 1: Una red `/24` (Clase C)**
+	- Bits par hosts: 32 - 24 = **8 ceros.**
+	- Cálculo: 2⁸ = **256 hosts totales**
+- **Ejemplo 2: Una red `/28`**
+	- Bits para hosts: 32 - 28 = **4 ceros.**
+	- Cálculo: 2⁴ = **16 hosts totales.**
+- **Ejemplo 3: Una red  `/18`**
+	- Bits para hosts: 32-18 =  **14 ceros.**
+	- Cálculo: 2¹⁴ = **16.384 hosts totales.**
+
+> # ❗Para tener presente
+> De este total de hosts, siempre se reservan 2 direcciones: la primera para identificar la red y la última para el broadcast.
+
