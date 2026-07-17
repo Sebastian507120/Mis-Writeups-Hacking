@@ -4,44 +4,43 @@ description: Resolución de la máquina Meow de HackTheBox
 tags:
   - Starting_Point
 ---
-- **Nombre:** FAWN
-    
-- **SO:** Linux 
-    
-- **Dificultad:** Very Easy
-    
-- **IP:** `10.10.10.X`
+
+# FAWN
+
+* **Nombre:** FAWN
+* **SO:** Linux
+* **Dificultad:** Very Easy
+* **IP:** `10.10.10.X`
 
 START
 
-![458](imagenes/Acronimo.png)
+![458](../../.gitbook/assets/Acronimo.png)
 
-📂 FTP (File Transfer Protocol)
-Es el estándar para transferir archivos entre computadores en una red. Se usa principalmente para subir o descargar datos de un servidor remoto.
+📂 FTP (File Transfer Protocol) Es el estándar para transferir archivos entre computadores en una red. Se usa principalmente para subir o descargar datos de un servidor remoto.
 
-- **Puertos** : Funciona por los puertos **21** (Para enviar órdenes) y **20** (para mover los datos).
-- **Nota de seguridad** : Por defecto, el FTP no cifra la información, lo que significa que las contraseñas viajan de forma legible si alguien intercepta la conexión. 
+* **Puertos** : Funciona por los puertos **21** (Para enviar órdenes) y **20** (para mover los datos).
+* **Nota de seguridad** : Por defecto, el FTP no cifra la información, lo que significa que las contraseñas viajan de forma legible si alguien intercepta la conexión.
 
-![](imagenes/Port.png)
-- El puerto por el cual FTP escucha usualmente es el puerto **21**
+![](../../.gitbook/assets/Port.png)
 
+* El puerto por el cual FTP escucha usualmente es el puerto **21**
 
-![](imagenes/FAWN%20question%203.png)
+![](<../../.gitbook/assets/FAWN question 3.png>)
 
-Así como el servicio `HTTP` tiene su versión segura que es **HTTPS**  el servicio `FTP` tiene su versión segura que es el **SFTP** la **"s"** viene de secure
+Así como el servicio `HTTP` tiene su versión segura que es **HTTPS** el servicio `FTP` tiene su versión segura que es el **SFTP** la **"s"** viene de secure
 
-
-![](imagenes/FAWN%20question%204.png)
+![](<../../.gitbook/assets/FAWN question 4.png>)
 
 El comando `ping` es un a herramienta de diagnóstico básica para comprobar si nuestro equipo está conectado a otro dispositivo o a Internet. Funciona enviando pequeños paquetes de datos a una dirección **IP** y esperando una respuesta, nos permite medir la velocidad y verificar si hay conexión.
 
-![](imagenes/FAWN%20question%205.png)
+![](<../../.gitbook/assets/FAWN question 5.png>)
 
->🔍 Enumeración 
->Entramos a la parte de enumeración donde de la mano de `Nmap` podremos  saber la versión de **FTP** que tiene nuestra maquina ejecutando el siguiente comando : `nmap -sV -p 21 10.129.78.182`
->	- (-sV) :   Le decimos a nmap que hable con el servicio y pregunte que programa hay y que versión es.
+> 🔍 Enumeración Entramos a la parte de enumeración donde de la mano de `Nmap` podremos saber la versión de **FTP** que tiene nuestra maquina ejecutando el siguiente comando : `nmap -sV -p 21 10.129.78.182`
+>
+> * (-sV) : Le decimos a nmap que hable con el servicio y pregunte que programa hay y que versión es.
 
-Resultado: 
+Resultado:
+
 ```
 ❯ nmap -sV -p 21 10.129.78.182
 Starting Nmap 7.95 ( https://nmap.org ) at 2026-04-14 22:29 -05
@@ -56,19 +55,20 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 11.95 seconds
 ```
 
-Y como podemos observar en la columna **Versión** encontraremos la versión del servicio **FTP** y esa la debemos de poner en la respuesta luego del texto **vsftpd**. 
+Y como podemos observar en la columna **Versión** encontraremos la versión del servicio **FTP** y esa la debemos de poner en la respuesta luego del texto **vsftpd**.
 
-![](imagenes/FAWN%20question%206.png)
+![](<../../.gitbook/assets/FAWN question 6.png>)
 
 Si observamos en el fragmento de texto del punto anterior justo una fila abajo de la versión que nos solicitaban esta la respuesta a esta pregunta que es un sistema **Unix**
 
-![](imagenes/FAWN%20Question%207.png)
+![](<../../.gitbook/assets/FAWN Question 7.png>)
 
->## ❗Tener presente
->Si tenemos instalada la shell **zsh** al ejecutar el comando toca ponerle una barra invertida para que el sistema no lo confunda (si tenemos una bash escribirlo como esta en la captura) el comando seria así : `ftp -\?` Como se evidencia en el siguiente fragmento de texto :
-
+> ### ❗Tener presente
+>
+> Si tenemos instalada la shell **zsh** al ejecutar el comando toca ponerle una barra invertida para que el sistema no lo confunda (si tenemos una bash escribirlo como esta en la captura) el comando seria así : `ftp -\?` Como se evidencia en el siguiente fragmento de texto :
 
 <details>
+
 <summary>Ver banner de bienvenida servicio (FTP)</summary>
 
 ```bash
@@ -116,14 +116,13 @@ usage: ftp [-46AadefginpRtVv] [-N NETRC] [-o OUTPUT] [-P PORT] [-q QUITTIME]
 
 </details>
 
-
-![](imagenes/FAWN%20Question%208.png)
+![](<../../.gitbook/assets/FAWN Question 8.png>)
 
 **anonymous** El usuario que permite acceder a un servidor **FTP** sin necesidad de una cuenta registrada. Cuando nos pida el usuario al conectarnos podremos tal cual **anonymous** y cuando nos pida contraseña simplemente damos presionamos la tecla **Enter** y estaremos dentro.
 
-![](imagenes/FAWN%20Question%209.png)
+![](<../../.gitbook/assets/FAWN Question 9.png>)
 
-Como el puerto 21 esta abierto y este puerto es del servicio FTP trataremos de conectarnos con el usuario anteriormente comentado para ver si nos encontramos con esta vulnerabilidad llamada **acceso anónimo**  :
+Como el puerto 21 esta abierto y este puerto es del servicio FTP trataremos de conectarnos con el usuario anteriormente comentado para ver si nos encontramos con esta vulnerabilidad llamada **acceso anónimo** :
 
 ```
 ❯ ftp 10.129.78.182
@@ -138,31 +137,22 @@ Using binary mode to transfer files.
 ftp> 
 ```
 
-
 Y podemos apreciar que el código que aparece luego de entrar es : **220**
 
-![](imagenes/FAWN%20Question%2010.png)
+![](<../../.gitbook/assets/FAWN Question 10.png>)
 
-Como lo había comentado anteriormente y de las primeras cosas que se debe hacer cuando se entra a alguna máquina o en este caso al servicio FTP.  Se hace para saber con que archivos y directorios contamos:
+Como lo había comentado anteriormente y de las primeras cosas que se debe hacer cuando se entra a alguna máquina o en este caso al servicio FTP. Se hace para saber con que archivos y directorios contamos:
 
-
-![](imagenes/cap%20question%2010.png)
+![](<../../.gitbook/assets/cap question 10.png>)
 
 Podemos observar la Flag de esta máquina en la captura.
 
-![](imagenes/FAWN%20Question%2011.png)
+![](<../../.gitbook/assets/FAWN Question 11.png>)
 
-Para poder leer la **Flag**  lo que debemos de hacer es descargarnos el archivo a nuestra maquina local y esto se hace con el comando `get` el comando completo es :  `get flag.txt`
-y cuando revisemos en el directorio desde el cual nos conectamos al servicio **FTP** podremos visualizar la **Flag** haciendo un simple **cat** al archivo
+Para poder leer la **Flag** lo que debemos de hacer es descargarnos el archivo a nuestra maquina local y esto se hace con el comando `get` el comando completo es : `get flag.txt` y cuando revisemos en el directorio desde el cual nos conectamos al servicio **FTP** podremos visualizar la **Flag** haciendo un simple **cat** al archivo
 
+![](<../../.gitbook/assets/FAWN Flag 2.0.png>)
 
-![](imagenes/FAWN%20Flag%202.0.png)
+Al poner el texto que nos sale en el espacio de la **Flag** en `Hack The Box` y darle verificar nos la marcará como correcta :
 
-Al poner el texto que nos sale en el espacio de la **Flag** en `Hack The Box` y darle verificar nos la marcará como correcta :  
-
-![](imagenes/FAWN%20flag.png)
-
- 
-   
-
-
+![](<../../.gitbook/assets/FAWN flag.png>)

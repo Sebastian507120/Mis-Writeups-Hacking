@@ -5,58 +5,55 @@ tags:
   - Starting_Point
 ---
 
-- **Nombre:** MEOW
-    
-- **SO:** Linux 
-    
-- **Dificultad:** Very Easy
-    
-- **IP:** `10.129.73.192`
+# MEOW
+
+* **Nombre:** MEOW
+* **SO:** Linux
+* **Dificultad:** Very Easy
+* **IP:** `10.129.73.192`
 
 START
 
-![412](imagenes/Acronym%20VM.png)
+![412](<../../.gitbook/assets/Acronym VM.png>)
 
-Una `Virtual Machine` o `Maquina Virtual` en español es una emulación de un sistema operativo. En ciberseguridad, las usamos para aislar nuestro entorno de ataque evitando riesgos en  nuestro sistema anfitrión. 
+Una `Virtual Machine` o `Maquina Virtual` en español es una emulación de un sistema operativo. En ciberseguridad, las usamos para aislar nuestro entorno de ataque evitando riesgos en nuestro sistema anfitrión.
 
-![](imagenes/Terminal-1.png)
+![](../../.gitbook/assets/Terminal-1.png)
 
 La `terminal` `(o consola)` es el intérprete de comandos. A diferencia de una interfaz gráfica `(GUI)`, la terminal nos permite ejecutar herramientas de hacking que no tienen "botones", dándonos un control total y más rápido sobre el sistema.
 
-![](imagenes/Openvpn.png)
+![](../../.gitbook/assets/Openvpn.png)
 
-El servicio que usamos para conectarnos a la vpn de Hack The Box es openvpn  el ejecutarlo es sencillo, estando en la carpeta donde descargamos la vpn de Hack The Box ejecutamos el comando :  `sudo openvpn nombre de la vpn` en mi caso quedaría de la siguiente manera : `sudo openvpn hackerbolt.ovpn` 
+El servicio que usamos para conectarnos a la vpn de Hack The Box es openvpn el ejecutarlo es sencillo, estando en la carpeta donde descargamos la vpn de Hack The Box ejecutamos el comando : `sudo openvpn nombre de la vpn` en mi caso quedaría de la siguiente manera : `sudo openvpn hackerbolt.ovpn`
 
-> ✅ Tip de Conexión
-> Siempre verifica que el comando `sudo openvpn` no arroje errores de "Auth Failed".
+> ✅ Tip de Conexión Siempre verifica que el comando `sudo openvpn` no arroje errores de "Auth Failed".
 
+![](../../.gitbook/assets/Ping.png)
 
-![](imagenes/Ping.png)
+El comando ping es una herramienta esencial de diagnostico de red para verificar la conectividad con un host remoto, medir el tiempo de respuesta (latencia) y detectar pérdida de paquetes.
 
-El comando ping es una herramienta esencial de diagnostico de red para verificar la conectividad con un host remoto, medir el tiempo de respuesta (latencia) y detectar pérdida de paquetes. 
-
-![](imagenes/Nmap.png)
+![](../../.gitbook/assets/Nmap.png)
 
 Nmap (Network Mapper) es la herramienta más importante de un pentester No solo encuentra puertos abiertos, sino que puede decirte qué versiones de software corren y hasta detectar vulnerabilidades.
 
-> ## 🔍 Enumeración
+> ### 🔍 Enumeración
+>
 > En la terminal, solemos usar `nmap -p- --open` para escanear los 65,535 puertos y ver solo los que están escuchando
 
-Respuesta: 
+Respuesta:
 
-
-![](imagenes/telnet.png)
+![](../../.gitbook/assets/telnet.png)
 
 Evidencia:
 
-
-![](imagenes/Evidencia.png)
+![](../../.gitbook/assets/Evidencia.png)
 
 Y utilizando el comando anteriormente explicado podemos observar que en el puerto 23 tenemos escuchando el servicio de Telnet. El escaneo de los 65,535 puertos puede tardar un poco como en este caso 1 min y medio, por eso usamos `--min-rate 5000` si queremos ir más rápido.
 
-![](imagenes/Root.png)
+![](../../.gitbook/assets/Root.png)
 
 <details>
+
 <summary>Ver banner de bienvenida completo (Telnet)</summary>
 
 ```bash
@@ -110,7 +107,7 @@ root@Meow:~#
 
 </details>
 
-Como podemos ver en el anterior banner cuando lo desplegamos podemos visualizar como es que nos conectamos al servicio Telnet  escribimos `telnet + la direccion ip de la máquina` cuando nos pida el usuario escribimos `root`  y en la contraseña solamente presionamos enter y ya estaremos dentro 
+Como podemos ver en el anterior banner cuando lo desplegamos podemos visualizar como es que nos conectamos al servicio Telnet escribimos `telnet + la direccion ip de la máquina` cuando nos pida el usuario escribimos `root` y en la contraseña solamente presionamos enter y ya estaremos dentro
 
 ```
 root@Meow:~# ls
@@ -120,8 +117,8 @@ b40abdfe23665f766f9c61ecba8a4c19
 root@Meow:~# 
 ```
 
-Una vez obtenida la shell, iniciamos la fase de **post-explotación** realizando una enumeración local básica. Primero, ejecutamos el comando `whoami` para confirmar que contamos con privilegios de **root** . Posteriormente, mediante el comando `ls`, listamos el contenido del directorio actual e identificamos el archivo  `flag.txt`. Finalmente, empleamos `cat` para visualizar la bandera y completar el objetivo.
+Una vez obtenida la shell, iniciamos la fase de **post-explotación** realizando una enumeración local básica. Primero, ejecutamos el comando `whoami` para confirmar que contamos con privilegios de **root** . Posteriormente, mediante el comando `ls`, listamos el contenido del directorio actual e identificamos el archivo `flag.txt`. Finalmente, empleamos `cat` para visualizar la bandera y completar el objetivo.
 
-![629](imagenes/Flag.png)
+![629](../../.gitbook/assets/Flag.png)
 
 💡 **Lección:** Esta máquina demuestra los riesgos de protocolos antiguos y sin cifrar como **Telnet**, y la importancia de no permitir inicios de sesión administrativos (`root`) sin credenciales robustas.
