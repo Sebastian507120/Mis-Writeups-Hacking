@@ -1,28 +1,21 @@
 # 🚀 ¡Hola! Soy Sebastián Díaz
 
-¡Bienvenido/a a mi base de conocimientos personal! 
+Bienvenido/a a mi base de conocimientos. Soy estudiante de 9no semestre de Ingeniería de Sistemas en la UDI y me estoy formando de manera autodidacta en Ciberseguridad (actualmente estudiando Introducción al Hacking en Hack4u). 
 
-Soy estudiante de **8vo semestre de Ingeniería de Sistemas en la UDI** y un entusiasta de la tecnología. 
-
-Actualmente, estoy ampliando mi formación de manera **autodidacta** en el área de la seguridad informática, específicamente cursando una Introducción a la Ciberseguridad y al Hacking Ético (vía Hack4u). Mi objetivo principal en esta etapa es construir una base técnica muy sólida. Por eso, dedico mi tiempo a entender profundamente desde el funcionamiento de las redes hasta las fases de reconocimiento y la identificación de vulnerabilidades, antes de pasar a la explotación de sistemas.
+En este repositorio escribo lo que aprendo. Aquí documento mi proceso para construir una base técnica inquebrantable antes de saltar a la explotación.
 
 ---
 
 ### 📂 ¿Qué vas a encontrar aquí?
 
-Este repositorio funciona como mi "cuaderno de laboratorio", el lugar donde documento lo que voy aprendiendo para interiorizarlo mejor. Navegando por el menú verás:
-
-*   **🌐 Fundamentos y Redes:** Mis apuntes sobre Direcciones IP, el Modelo OSI, protocolos (TCP/UDP) y ejercicios prácticos de *Subnetting*. Considero fundamental saber cómo se comunican las redes antes de intentar auditarlas.
-*   **🔍 Reconocimiento:** Documentación sobre cómo analizar objetivos, uso avanzado de herramientas como Nmap, enumeración de servicios (HTTP, SMB, FTP) y fases iniciales de una auditoría.
-*   **🔌 Hardware de Pentesting:** Notas sobre pruebas físicas y configuración de dispositivos con los que experimento (AWUS1900, BadUSB Hiletgo, Proxmark3). 
-*   **📜 Certificados & Entorno de Trabajo:** Registros de mi formación continua y cómo organizo mi entorno en Linux para ser más eficiente en el día a día.
+*   **🌐 Redes y Fundamentos:** Modelo OSI, TCP/UDP y Subnetting. La base para entender cualquier infraestructura.
+*   **🔍 Reconocimiento:** Fases iniciales de auditoría, enumeración de servicios y uso de Nmap.
+*   **🔌 Hardware de Pentesting:** Experimentación física con dispositivos como Proxmark3, AWUS1900 y BadUSB.
 
 ---
 
-### 💡 Mi Filosofía de Trabajo
+### 💡 Mi Enfoque
 
-Soy 100% transparente con mi proceso: estudio por mi cuenta, documento lo que entiendo y lo aplico paso a paso. Me gusta ir al detalle, ya sea entendiendo la estructura de una petición web, configurando un entorno local en Docker para pruebas, o analizando cómo funciona un escaneo de puertos por debajo.
+Soy 100% transparente con mi proceso: estudio por mi cuenta, documento lo que entiendo y lo aplico paso a paso. Mi mayor fortaleza para afrontar unas prácticas profesionales hoy es mi capacidad investigativa, mi constancia y la disciplina para registrar técnicamente mi progreso.
 
-Si estás revisando este perfil por una oportunidad de prácticas, mi mayor fortaleza hoy es mi capacidad para investigar de forma autónoma, ser constante con mi aprendizaje y tener la disciplina de documentar técnica y organizadamente mi progreso.
-
-📌 ¡Siéntete libre de explorar! Si te interesa mi perfil, tienes todos mis datos de contacto en mi hoja de vida.
+📌 ¡Siéntete libre de explorar! Si quieres contactarme, tienes todos mis datos en mi hoja de vida o puedes conectar conmigo en mi perfil de [LinkedIn](https://www.linkedin.com/in/juan-sebastian-diaz-mantilla-90b26b295/).
