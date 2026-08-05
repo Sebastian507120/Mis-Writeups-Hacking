@@ -1,12 +1,12 @@
-Buenos muchachos al entrar a bandit4 nos encontraremos con una carpeta con el nombre de inhere dentro de ella estará la contraseña para entrar en bandit5 asi que vamos a por ello!!
+Buenos muchachos al entrar a **bandit4** nos encontraremos con una carpeta con el nombre de inhere dentro de ella estará la contraseña para entrar en **bandit5**  asi que vamos a por ello!!
 
-PASO 1: 
+# PASO 1: 
 Entramos en la carpeta de nombre inhere con el comando : cd inhere
 
-PASO 2: 
+# PASO 2: 
 Hacemos un poderosisimo ls para verlos archivos que tenemos dentro y nos percatamos que tienen cierto nombre algo peculiar
 
-PASO 3:
+# PASO 3:
 Utilizamos el comando "file" para ver que tipo de archivos son los que tenemos el comando completo seria : file./*
 
 file -> No abre el archivo solo lo escanea para decirnos que tipo de archivo es
