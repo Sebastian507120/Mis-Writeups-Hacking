@@ -7,6 +7,22 @@ En este archivo encontrarás varios ejercicios de subnetting
 
 </details>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 > [!example]- Ejercicio 1: Objetivo 192.168.1.0/26
 >![](../../Capturas/Subnetting%20ejercicio%201%20corregido.png%202.png)
 
