@@ -10,5 +10,5 @@ Para ver este tipo de archivos la forma mas sencilla es  de la siguiente forma
 
 De esta manera estaríamos seleccionado el archivo que queremos y nos estaría mostrando el contenido de este que en este caso es : 
 
-**Contraseña de bandit2 : **
+**Contraseña de bandit2 :**
 `263JGJPfgU6LtdEvgfWU1XP5yac29mFx` 
