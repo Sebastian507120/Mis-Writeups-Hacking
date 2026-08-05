@@ -14,7 +14,7 @@ La MAC (Media Access Control) es un identificador único asignado a la tarjeta d
 
 * Formato: Está compuesta por 48 bits (6 bytes), representados generalmente en formato hexadecimal ( 00:1A:2B:3C:4D:5E ).
 
-![542](<../../.gitbook/assets/Direcciones MAC (OUI y NIC)-20260607213046.png>)
+![](../../Capturas/Direcciones%20MAC%20(OUI%20y%20NIC)-20260607213046.png)
 
 ## 🏢 Identificación del Fabricante (OUI)
 
@@ -23,7 +23,7 @@ La dirección MAC es rastreable porque su estructura está dividida en dos parte
 1. OUI ( Organizationally Unique Identifier ): Son los primeros 3 bytes (6 caracteres hexadecimales). IEEE asigna estos identificadores a los fabricantes. Esto permite saber de inmediato si la tarjeta de red es de Cisco, Intel, Apple, etc.
 2. NIC Specific: Son los últimos 3 bytes, asignados por el propio fabricante de manera secuencial a cada dispositivo.
 
-![649](<../../.gitbook/assets/Direcciones MAC (OUI y NIC)-20260607232429.png>)
+![](../../Capturas/Direcciones%20MAC%20(OUI%20y%20NIC)-20260607232429.png)
 
 ## 🎭 MAC Spoofing
 
@@ -45,7 +45,7 @@ Antes de cambiar la MAC, primero debemos asegurarnos de tenerlo instalado lo ver
 
 ### Menú de macchanger :
 
-![](<../../.gitbook/assets/Direcciones MAC (OUI y NIC)-20260607234521.png>)
+![](../../Capturas/Direcciones%20MAC%20(OUI%20y%20NIC)-20260607234521.png)
 
 ### Comandos Principales
 

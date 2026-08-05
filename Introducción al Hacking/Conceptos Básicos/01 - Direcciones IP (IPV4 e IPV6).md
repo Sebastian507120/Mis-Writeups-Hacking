@@ -17,11 +17,11 @@ Es el sistema que llevamos usando toda la vida, pero tiene un problema : se qued
 * **El gran límite:** Solo permite crear unos 4.000 millones de direcciones. como hoy en día todo el mundo tiene celular, computadora, televisor y hasta bombillos inteligentes, las direcciones IPv4 ya se agotaron.
 * **Calculo hecho en Linux:**
 
-![](<../../.gitbook/assets/Direcciones IP (IPV4 e IPV6)-20260516194308.png>)
+![](../../Capturas/Direcciones%20IP%20(IPV4%20e%20IPV6)-20260516194308.png)
 
 * **Número de población según countrymeters.info :**
 
-![](<../../.gitbook/assets/Direcciones IP (IPV4 e IPV6)-20260516194340.png>)
+![](../../Capturas/Direcciones%20IP%20(IPV4%20e%20IPV6)-20260516194340.png)
 
 * **Dato clave:** Como se logra ver en la imagen de arriba a fecha de hoy 16 de mayo de 2026 hay 8.000 millones de personas en el mundo por eso literal ya se acabaron las direcciones **IPv4** pero se creo una solución y esa solución se llama **IPv6**.
 
@@ -32,7 +32,7 @@ Nació exclusivamente para solucionar la falta de espacio de **IPv4** y asegurar
 * **Cómo se ve:** Es mucho más larga, mezcla números y letras, y se separa por dos puntos ( Ejemplo: `2001:0db8:85a3:8a2e`).
 * **Calculo de direcciones IPv6:**
 
-![](<../../.gitbook/assets/Direcciones IP (IPV4 e IPV6)-20260516194401.png>)
+![](../../Capturas/Direcciones%20IP%20(IPV4%20e%20IPV6)-20260516194401.png)
 
 * **Su ventaja:** Permite una cantidad de direcciones tan ridículamente alta que podríamos asignarle miles de millones de **IPs** a cada persona y aun así sobrarían.
 * **Mejora extra:** Además de ser enorme, es más rápida organizando el tráfico de datos y viene con mejoras de seguridad de fábrica.
