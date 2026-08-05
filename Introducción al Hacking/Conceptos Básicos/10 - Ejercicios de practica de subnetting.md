@@ -40,7 +40,7 @@ En este archivo encontrarás varios ejercicios de subnetting explicados paso a p
 
 
 <details>
-<summary><b>Ejercicio 5: Objetivo 192.168.2.0/23</b></summary>
+<summary><b>Ejercicio 6: Objetivo 192.168.2.0/23</b></summary>
 
 ![](../../Capturas/Subnetting%20ejercicio%206%201.png)
 

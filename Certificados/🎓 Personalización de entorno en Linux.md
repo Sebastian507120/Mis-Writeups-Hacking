@@ -2,7 +2,7 @@
 
 Este certificado acredita la finalización exitosa del curso de **Personalización de Entorno en Linux** impartido por Marcelo Vázquez (S4vitar). Durante esta formación, adquirí las habilidades prácticas para configurar y personalizar un sistema Linux desde cero, transformándolo en un entorno de trabajo profesional, altamente eficiente y optimizado para auditorías de seguridad.
 
-![](<../.gitbook/assets/🎓 Personalización de entorno en Linux-20260629054004.png>)
+![](../Capturas/🎓%20Personalización%20de%20entorno%20en%20Linux-20260629054004.png)
 
 ## Detalles de la Credencial
 

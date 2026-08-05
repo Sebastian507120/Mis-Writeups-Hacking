@@ -1,8 +1,7 @@
-# 🎓 Introducción al hacking
 
 Este certificado acredita la finalización exitosa del curso de **Introducción a Linux** impartido por Marcelo Vázquez (S4vitar). Durante esta formación, adquirí las bases fundamentales para operar y maniobrar de forma fluida en sistemas operativos Linux. una competencia indispensable para el pentesting y la ciberseguridad.
 
-![](<../.gitbook/assets/Introducción al hacking (Hack4u)-20260629052158.png>)
+![](../Capturas/Introducción%20al%20hacking%20(Hack4u)-20260629052158.png)
 
 ### Detalles de la credencial:
 
