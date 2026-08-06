@@ -4,6 +4,6 @@
 
 2. Portátil que necesitemos formatear en mi caso sera un poderoso ThinkPad T460 corporativo. 
 
-![387](../Capturas/ThinkPad%201.jpeg)
+![494](../Capturas/Herramientas-20260806161343.png)
 
 3. Paciencia por que puede llegar a demorar :,)
