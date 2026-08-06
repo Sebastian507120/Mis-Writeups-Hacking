@@ -1,4 +1,4 @@
-# 🚀 ¡Hola! Soy Sebastián Díaz
+# 🧑‍💻 ¡Hola! Soy Sebastián Díaz
 
 Bienvenido/a a mi base de conocimientos. Soy estudiante de 9no semestre de Ingeniería de Sistemas en la UDI y me estoy formando de manera autodidacta en Ciberseguridad (actualmente estudiando Introducción al Hacking en Hack4u). 
 
