@@ -1,8 +1,8 @@
 # 🧑‍💻 ¡Hola! Soy Sebastián Díaz
 
-Bienvenido/a a mi base de conocimientos. Soy estudiante de 9no semestre de Ingeniería de Sistemas en la UDI y me estoy formando de manera autodidacta en Ciberseguridad (actualmente estudiando Introducción al Hacking en Hack4u). 
+Bienvenido/a a mi base de conocimientos. Soy estudiante de 9no semestre de Ingeniería de Sistemas en la UDI y estoy realizando una **formación complementaria en Ciberseguridad** (actualmente estudiando Introducción al Hacking en Hack4u).
 
-En este repositorio escribo lo que aprendo. Aquí documento mi proceso para construir una base técnica inquebrantable antes de saltar a la explotación.
+En este repositorio escribo lo que aprendo. Aquí documento mi proceso para construir una base técnica inquebrantable, **con el fin de aportar soluciones sólidas y seguras en mi futura práctica profesional.**
 
 ---
 
