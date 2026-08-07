@@ -1,6 +1,6 @@
 Paso a paso para conseguir la contraseña de **bandit2**
 
-Al entrar en **bandit1** y hacer un `ls` vemos que hay un archivo con  el nombre de `"-"`  y si intentamos hacerle un `cat` direcatemente no nos mostrará lo que hay dentro si no que se quedara esperando como si le fueramos a meter algún comando de `cat` 
+Al entrar en **bandit1** y hacer un `ls` vemos que hay un archivo con  el nombre de `"-"`  y si intentamos hacerle un `cat` directamente no nos mostrará lo que hay dentro si no que se quedara esperando como si le fuéramos a meter algún comando de `cat` .
 
 # PASO 1 Y ÚNICO :
 

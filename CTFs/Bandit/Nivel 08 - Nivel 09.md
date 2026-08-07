@@ -8,13 +8,13 @@
 
 - `sort data.txt`**(El ordenador):** Toma todo el desorden del archivo y lo organiza alfabéticamente.
 
-- `|`(La Tubería / Pipe): Es el conector mágico. Toma el resultado del comando anterior (el texto ya ordenado) y se lo pasa directamente al siguiente comando
+- `|` **(La Tubería / Pipe):** Es el conector mágico. Toma el resultado del comando anterior (el texto ya ordenado) y se lo pasa directamente al siguiente comando
 
-- uniq(EL inspector): Es la herramienta que revisa las lineas repetidas.
+- `uniq` **(EL inspector):** Es la herramienta que revisa las lineas repetidas.
 
-- (-u)(Solo Únicos): Es la opción clave
-  - Sin esto, uniq solo borraría los duplicados (dejando una copia de cada uno)
+- `(-u)` **(Solo Únicos):** Es la opción clave
+  - Sin esto, `uniq` solo borraría los duplicados (dejando una copia de cada uno)
 
-  - Con -u, le decimos: Elimina todo lo que se repita  y muéstrame solo lo que aparezca una unica vez.
+  - Con `-u`, le decimos: Elimina todo lo que se repita  y muéstrame solo lo que aparezca una unica vez.
 
   Entoces luego de ejecutar el comando "sort data.txt | uniq -u" encontrariamos la contraseña para el bandit9 que en mi caso es : 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
