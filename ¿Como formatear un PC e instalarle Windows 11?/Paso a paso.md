@@ -69,6 +69,7 @@ Windows es por excelencia el **SO** que la mayoría de personas utilizan en su d
 
 
 4. Llegaremos a la sección de **Download - Windows 11 Spanish** daremos clic en **64-bit Download** y se nos empezará la descarga de la imagen ``.iso``
+
 .![](../Capturas/Paso%20a%20paso-20260804134305.png)
 
 
@@ -89,7 +90,7 @@ En mi casó presionaré **F12**
 # Foto del boot menú por tomar
 
 
-1. Apareceremos en Ventoy en mi caso aparecen otras imágenes ``.iso`` por que eh trabajado con ellas pero su sus casos solo aparecerá la ultima que es la imagen ``.iso`` de **Windows 11** 
+1. Apareceremos en Ventoy en mi caso aparecen otras imágenes ``.iso`` por que eh trabajado con ellas pero  sus casos solo aparecerá la ultima que es la imagen ``.iso`` de **Windows 11** 
 
 ![](../Capturas/Paso%20a%20paso-20260804200944.png)
 
