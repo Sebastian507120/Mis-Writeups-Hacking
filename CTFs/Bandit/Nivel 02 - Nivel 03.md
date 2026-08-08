@@ -1,3 +1,8 @@
+---
+tags:
+  - CTF_Bandit
+---
+
 Bueno como dijo una persona en el foro de la academia el **bandit3** estaba regalado 
 
 # PASO 1: 

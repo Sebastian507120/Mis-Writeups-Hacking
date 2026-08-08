@@ -19,3 +19,14 @@ En este repositorio escribo lo que aprendo. Aquí documento mi proceso para cons
 Soy 100% transparente con mi proceso: estudio por mi cuenta, documento lo que entiendo y lo aplico paso a paso. Mi mayor fortaleza para afrontar unas prácticas profesionales hoy es mi capacidad investigativa, mi constancia y la disciplina para registrar técnicamente mi progreso.
 
 📌 ¡Siéntete libre de explorar! Si quieres contactarme, tienes todos mis datos en mi hoja de vida o puedes conectar conmigo en mi perfil de [LinkedIn](https://www.linkedin.com/in/juan-sebastian-diaz-mantilla-90b26b295/).
+
+
+📌 **¡Siéntete libre de explorar!** También puedes ver mi progreso de mecanografía o conectar conmigo:
+<p align="left">
+  <a href="https://www.linkedin.com/in/juan-sebastian-diaz-mantilla-90b26b295" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+  <a href="https://monkeytype.com/profile/Hackerbolt" target="_blank">
+    <img src="https://img.shields.io/badge/Monkeytype-2C2E3B?style=for-the-badge&logo=monkeytype&logoColor=E2B714" alt="Monkeytype"/>
+  </a>
+</p>

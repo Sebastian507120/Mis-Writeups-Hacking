@@ -1,117 +1,104 @@
-Para resolver este nivel hay dos formas de completarlo  forma manual y de forma automatizada con un script
+---
+tags:
+  - CTF_Bandit
+---
 
--------------------------------------------DE FORMA MANUAL------------------------------------------------
-El Problema: El archivo data.txt es un hexdump (representación en texto de datos binarios) de un archivo que ha sido comprimido muchas veces, una capa sobre otra. Además, no tengo permisos de escritura en mi carpeta actual para descomprimir cosas.
+**El Problema:** El archivo **data.txt** es un hexdump (representación en texto de datos binarios) de un archivo que ha sido comprimido muchas veces, una capa sobre otra. Además, no tengo permisos de escritura en mi carpeta actual para descomprimir cosas.
 
-La Solución:
+**La Solución:** Crear una carpeta de trabajo en `/tmp` donde sí tenga permisos, revertir el `hexdump` a binario usando `xxd`, y ejecutar un ciclo iterativo de identificar, renombrar y descomprimir hasta llegar al archivo de texto puro con la contraseña.
 
-1.Crear una carpeta de trabajo en /tmp donde sí tenga permisos.
+# Metodología de Resolución 
+Existen dos formas de resolver este nivel: de forma **manual** (ideal para entender la lógica paso a paso) o de forma **automatizada** mediante un script en Bash.
 
-2.Revertir el hexdump a binario usando xxd.
+## 1️⃣ Opción 1: Resolución Manual
+### Paso 1:  Crear un entorno de trabajo temporal
+Dado que no tenemos permisos de escritura en el directorio actual, nos trasladamos a `/tmp` y creamos una carpeta de trabajo:
 
-3.Entrar en un ciclo de Identificar -> Renombrar -> Descomprimir hasta llegar al archivo de texto puro.
+```
+cd $(mktemp -d)
+cp ~/data.txt .
+```
 
-🛠️ PASO 1: Crear un Espacio de Trabajo
-¿Por qué? No tenemos permiso para crear archivos en la carpeta donde aparecemos. Necesitamos ir a /tmp, que es la única zona donde Linux nos deja "hacer desorden".
+### Paso 2:  Revertir el Hexdump
+Convertimos el archivo de texto hexadecimal a su formato binario real usando la herramienta `xdd`.
 
-1.Crea una carpeta con un nombre que recuerdes (ej: micarpeta123) dentro de tmp:
-Comando: "mkdir /tmp/micarpeta123"
+```
+xxd -r data.txt data_original
+rm data.txt
+```
 
-2.Copia el archivo del reto a tu nueva carpeta:
-Comando: "cp data.txt /tmp/micarpeta123"
+### Paso 3:  Identificar y Descomprimir (El bucle lógico)
+Para cada archivo que vayamos obteniendo, debemos repetir una serie de pasos:
+1. Ver el tipo de archivo con `file`: `file <nombre_archivo>`
 
-3.Entra en tu carpeta para empezar a trabajar:
-Comando: "cd /tmp/micarpeta123"
+2. Renombrarlo con su extensión correspondiente (`.gz`, `.bz2` o `.tar`).
 
-🔄 PASO 2: Revertir el Hexdump
-¿Por qué? El archivo data.txt es solo texto que describe los bits (números hexadecimales). Necesitamos convertir ese texto en un archivo binario real para poder trabajar con él.
+3. Descomprimirlo con el comando adecuado.
 
-1.Convierte el hexdump a binario y guárdalo con un nombre nuevo (ej: data_original):
-Comando: "xxd -r data.txt data_original"
+- Si es **Gzip**:
 
-🔁 PASO 3: El Ciclo de Descompresión (El Bucle)
-La Lógica: El archivo está comprimido muchas veces con diferentes formatos (gzip, bzip2, tar). No sabemos el orden, así que debemos repetir estos 3 pasos constantemente hasta encontrar la contraseña.
+ ```
+ mv archivo archivo.gz
+gzip -d archivo.gz
+ ```
 
-Instrucciones Generales:
+- Si es **Bzip2**: 
 
-1. Usa ls para ver cómo se llama tu archivo actual.
+```
+mv archivo archivo.bz2
+bzip2 -d archivo.bz2
+```
 
-2. Usa file [nombre_archivo] para ver qué tipo de compresión tiene.
+- Si es **Tar**:
 
-3. Renómbralo con mv para ponerle la extensión correcta (.gz, .bz2, .tar).
+```
+mv archivo archivo.tar
+tar -xf archivo.tar
+```
 
-Ejecuta el comando de descompresión correspondiente.
+### Paso 4: Obtener la Flag
+Repetimos el proceso iterativamente hasta que el comando `file` nos indique que estamos ante un **"ASCII text"**. En ese momento, solo debemos leer su contenido:
 
-📋 TABLA DE REFERENCIA RÁPIDA (Copia esto tal cual)
+```
+cat <nombre_archivo_final>
+```
 
-CASO A: Si el comando file dice "gzip compressed data"
-1. Renombrar:
-Comando: "mv nombre_archivo nombre_archivo.gz"
+# 2️⃣ Opción 2: Resolución Automatizada (Script en Bash)
+Si prefieres agilizar el proceso y ver la magia de la automatización, puedes crear un script que detecte automáticamente el tipo de compresión y extraiga las capas una por una hasta revelar la contraseña.
 
-2. Descomprimir:
-Comando: "gzip -d nombre_archivo.gz"
+### Paso 1: Prepara tu espacio temporal:
 
-CASO B: Si el comando file dice "bzip2 compressed data"
-1. Renombrar:
-Comando: "mv nombre_archivo nombre_archivo.bz2"
+```
+cd $(mktemp -d)
+cp ~/data.txt .
+xxd -r data.txt data_original
+rm data.txt
+```
 
-2. Descomprimir: 
-Comando: "mv nombre_archivo nombre_archivo.bz2"
+### Paso 2: Crea el script de descompresión:
+Crea un archivo llamado `descompresor.sh` usando tu editor favorito (por ejemplo, `nano`):
 
-CASO C: Si el comando file dice "POSIX tar archive"
-1. Renombrar:
-Comando: "mv nombre_archivo nombre_archivo.tar"
+```
+nano descompresor.sh
+```
 
-2. Descomprimir
-Comando: "tar -xf nombre_archivo.tar"
-
-(Repite este paso unas 6 o 7 veces con el archivo nuevo que vaya saliendo).
-
-
-🏁 PASO 4: El Resultado Final
-Sigue descomprimiendo hasta que el comando file te diga: "ASCII text".
-
-1. Cuando sea texto, léelo para ver la contraseña:
-Comando: cat "nombre_del_archivo_final"
-
-y ya obtendriamos la contraseña del bandit13 que en mi caso es: 
-
-
---------------------------------------DE FORMA AUTOMATIZADA----------------------------------------------
-Paso 1: Preparar el entorno de trabajo
-Como no tengo permisos de escritura en el "home", tuve que crear un espacio temporal.
-
-1. Creé una carpeta temporal y entré en ella:
-Comando: "cd $(mktemp -d)"
-
-2. Copié el archivo del nivel a mi carpeta:
-Comando: "cp ~/data.txt ."
-
-3. Revertí el hexdump a binario (paso obligatorio antes de empezar):
-Comando: "xxd -r data.txt data_original"
-
-4. Borré el archivo viejo para no confundir al script:
-Comando: "rm data.txt"
+Pega el siguiente código optimizado dentro del archivo:
 
 
-Paso 2: Crear el script de descompresión
-Creé un archivo llamado "descompresor.sh" usando "nano":
-Comando: "nano descompresor.sh"
+<details>
 
-Y le pegué este código que detecta si es gzip, bzip2 o tar y actúa en consecuencia:
-Script:
+<summary>Ver banner de bienvenida completo (Telnet)</summary>
+
 #!/bin/bash
 
-# --- PALETA DE COLORES (Estilo Hacker Pro) ---
-# \e[1;3Xm activa el modo "Bold/Brillante" para que no se vea plano
-RED="\e[1;31m"      # Rojo neón (Errores)
-GREEN="\e[1;32m"    # Verde neón (Éxito final)
-YELLOW="\e[1;33m"   # Amarillo (Alertas)
-CYAN="\e[1;36m"     # Cian (Procesos e info)
-PURPLE="\e[1;35m"   # Morado (Archivos)
-RESET="\e[0m"       # Resetear color
+# --- PALETA DE COLORES ---
+RED="\e[1;31m"
+GREEN="\e[1;32m"
+YELLOW="\e[1;33m"
+CYAN="\e[1;36m"
+PURPLE="\e[1;35m"
+RESET="\e[0m"
 
-# Archivo inicial
 fichero="data_original"
 
 echo -e "${CYAN}==============================================${RESET}"
@@ -120,7 +107,6 @@ echo -e "${CYAN}==============================================${RESET}"
 sleep 1
 
 while true; do
-    # Identificamos el archivo
     if [ -f "$fichero" ]; then
         tipo_archivo=$(file "$fichero")
     else
@@ -128,29 +114,19 @@ while true; do
         break
     fi
 
-    # --- LÓGICA DEL BUCLE ---
-    
     if [[ "$tipo_archivo" == *"gzip compressed data"* ]]; then
-        # Usamos printf para un formato más limpio
         echo -e "${CYAN}[*] Detectado GZIP  -> ${RESET}Renombrando y extrayendo..."
         mv "$fichero" "$fichero.gz"
         gzip -d "$fichero.gz"
-
     elif [[ "$tipo_archivo" == *"bzip2 compressed data"* ]]; then
         echo -e "${CYAN}[*] Detectado BZIP2 -> ${RESET}Renombrando y extrayendo..."
         mv "$fichero" "$fichero.bz2"
         bzip2 -d "$fichero.bz2"
-
     elif [[ "$tipo_archivo" == *"POSIX tar archive"* ]]; then
         echo -e "${CYAN}[*] Detectado TAR   -> ${RESET}Desempaquetando..."
         mv "$fichero" "$fichero.tar"
         tar -xf "$fichero.tar"
-        rm "$fichero.tar" 
-        
-        # Actualizamos la variable buscando el nuevo archivo (excluyendo el script)
-        fichero=$(ls | grep -v "descompresor.sh")
-        echo -e "${PURPLE}    [+] Nuevo archivo extraído: $fichero${RESET}"
-
+        rm "$fichero.tar"
     elif [[ "$tipo_archivo" == *"ASCII text"* ]]; then
         echo -e "\n${GREEN}==============================================${RESET}"
         echo -e "${GREEN} [✔] ACCESO CONCEDIDO - CONTRASEÑA ENCONTRADA ${RESET}"
@@ -158,27 +134,26 @@ while true; do
         echo -e "${YELLOW}Key: ${RESET}$(cat "$fichero")"
         echo -e "${GREEN}==============================================${RESET}\n"
         break
-
     else
         echo -e "${RED}[!] Formato desconocido o fin del proceso.${RESET}"
         echo -e "Info: $tipo_archivo"
         break
     fi
-    
-    # Pausa dramática de 0.2 segundos para ver el flujo
+
+    # Actualizamos la variable para apuntar al archivo resultante más reciente
+    fichero=$(ls -t | grep -v "descompresor.sh" | head -n 1)
     sleep 0.2
 done
-  
 
-Paso 3: Ejecutar la solución
+</details>
 
-1. Le di permisos de ejecución al script:
-Comando: "chmod +x descompresor.sh"
+### Paso 3: Le damos permisos de ejecución y lo ejecutamos:
 
-2. Lo ejecuté y obtuve la contraseña:
-Comando: "./descompresor.sh"
+```
+chmod +x descompresor.sh
+./descompresor.sh
+```
 
-Luego de esto veremos por pantalla como se descomprime cada uno y hasta abajo el mensaje con la contraseña del bandit13 que en mi caso es: FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
+Luego de completar el proceso obtendríamos la contraseña del bandit13 (que para este nivel 12 a 13 suele ser `wbWdlBxWKcf4Du3TcyLaVl83YZ8JyEms`). 
 
-
-~Recordar que las contraseñas cambian con el tiempo
+> # Recuerda que las contraseñas pueden variar o cambiar con el tiempo.

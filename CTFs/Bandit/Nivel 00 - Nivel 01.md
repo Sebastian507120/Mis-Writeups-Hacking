@@ -1,3 +1,8 @@
+---
+tags:
+  - CTF_Bandit
+---
+
 Para encontrar esta Flag seguir los siguientes pasos : 
 
 # PASO 1:

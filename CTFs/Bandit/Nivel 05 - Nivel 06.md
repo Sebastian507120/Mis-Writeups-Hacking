@@ -1,3 +1,8 @@
+---
+tags:
+  - CTF_Bandit
+---
+
 Y seguimos con los retos del **bandit** 
 
 # PASO 1:

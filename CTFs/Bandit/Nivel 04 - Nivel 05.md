@@ -1,3 +1,8 @@
+---
+tags:
+  - CTF_Bandit
+---
+
 Buenos muchachos al entrar a **bandit4** nos encontraremos con una carpeta con el nombre de inhere dentro de ella estará la contraseña para entrar en **bandit5**  asi que vamos a por ello!!
 
 # PASO 1: 
@@ -24,4 +29,4 @@ como identificamos que el archivo 07 es el que podemos leer le hacemos un cat pa
 Al hacer el `cat` **felicitaciones!** habremos encontrago la contraseña del **bandit5** que en mi caso es :
 `4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw`
 
->## 📌 Recordar que estas contraseñas cambian constantemente
+>### 📌 Recordar que estas contraseñas cambian constantemente
