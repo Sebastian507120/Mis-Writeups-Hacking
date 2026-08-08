@@ -1,25 +1,25 @@
 📓 Mis Apuntes: Bandit Nivel 16 → 17
 
-El Reto:
-El nivel me pedía encontrar un puerto específico en el rango "31.000-32.000" en mi propia máquina (localhost). Había muchos puertos abiertos, pero solo uno hablaba "SSL" y me daría las credenciales; los demás eran servidores "eco" (repetían lo que yo enviaba).Además, la credencial esta vez no era una contraseña, sino una llave especial.
+**El Reto:**
+El nivel me pedía encontrar un puerto específico en el rango **31.000-32.000** en mi propia máquina **( localhost )**. Había muchos puertos abiertos, pero solo uno hablaba **SSL** y me daría las credenciales; los demás eran servidores **eco** (repetían lo que yo enviaba). Además, la credencial esta vez no era una contraseña, sino una llave especial.
 
-Concepto Nuevo: Port Scanning y Llaves RSA
-1. Port Scanning (Nmap): Aprendí a usar "nmap" no solo para ver qué puertas están abiertas, sino para identificar qué servicio corre en ella (usando la bandera -sV). Esto es vital para no probar puerto por puerto manualmente.
+**Concepto Nuevo:** `Port Scanning y Llaves RSA`
+1. **Port Scanning (Nmap):** Aprendí a usar **nmap** no solo para ver qué puertas están abiertas, sino para identificar qué servicio corre en ella (usando la bandera `-sV`). Esto es vital para no probar puerto por puerto manualmente.
 
-2. Llaves Privadas RSA: Aprendí que el acceso "SSH" no siempre es con contraseña escrita. Existe un método más seguro usando un archivo de "Llave privada" (Private Key). Quien tiene el archivo, tiene la llave para entrar.
+2. **Llaves Privadas RSA:** Aprendí que el acceso **SSH** no siempre es con contraseña escrita. Existe un método más seguro usando un archivo de **Llave privada (Private Key)**. Quien tiene el archivo, tiene la llave para entrar.
 
-🛠️ Solución Paso a Paso
-PASO 1: Escaneo inteligente de puertos
+# 🛠️ Solución Paso a Paso
+### PASO 1: Escaneo inteligente de puertos
 
-En lugar de probar uno por uno k usé "nmap" para escanear el rango y detectar versiones.
-Comando : "namp -p 31000-32000 -sV localhost"
+En lugar de probar uno por uno usé **nmap** para escanear el rango y detectar versiones.
+**Comando :**" `namp -p 31000-32000 -sV localhost`
 
-Desglose:
--nmap : El nombre del programa. Es la herramienta estándar para descubrir redes y auditoría de seguridad.
--(-p 31000-32000) :
-  -(-p): Le dice a nmap que solo quieres escanear puertos especificos.
-  -31000-32000 : El rango exacto. Si no pones esto, nmap solo escaneará los 1000 puertos más comunes (como el 80,443,22) y no encontraría los puertos altos de este reto.
--sV : (La estrella del Show)
+**Desglose:**
+**nmap :** El nombre del programa. Es la herramienta estándar para descubrir redes y auditoría de seguridad.
+- (-p 31000-32000) :
+- (-p): Le dice a nmap que solo quieres escanear puertos especificos.
+- 31000-32000 : El rango exacto. Si no pones esto, nmap solo escaneará los 1000 puertos más comunes (como el 80,443,22) y no encontraría los puertos altos de este reto.
+- -sV : (La estrella del Show)
   -Significa Service Version detection.
   -Sin esta bandera, nmap solo te dice "Open" (Abierto).
   -Con esta bandera, nmap "toca la puerta" y escucha qué responde el servicio. por eso pudiste ver la diferencia entre los servicios que decia "echo" y el que dijo ssl/unknown.

@@ -16,11 +16,9 @@ En este repositorio escribo lo que aprendo. Aquí documento mi proceso para cons
 
 ### 💡 Mi Enfoque
 
-Soy 100% transparente con mi proceso: estudio por mi cuenta, documento lo que entiendo y lo aplico paso a paso. Mi mayor fortaleza para afrontar unas prácticas profesionales hoy es mi capacidad investigativa, mi constancia y la disciplina para registrar técnicamente mi progreso.
+Trabajo bajo una premisa práctica: **investigar, aplicar y documentar** cada proceso de forma metódica. Mi valor diferencial para las prácticas profesionales se basa en la constancia, la disciplina técnica y la capacidad de análisis continuo.
 
 📌 ¡Siéntete libre de explorar! Si quieres contactarme, tienes todos mis datos en mi hoja de vida o puedes conectar conmigo en mi perfil de [LinkedIn](https://www.linkedin.com/in/juan-sebastian-diaz-mantilla-90b26b295/).
 
 📌 **¡Siéntete libre de explorar!** También puedes ver mi progreso de mecanografía o conectar conmigo:
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/juan-sebastian-diaz-mantilla-90b26b295)
-[![Monkeytype](https://img.shields.io/badge/Monkeytype-2C2E3B?style=for-the-badge&logo=monkeytype&logoColor=E2B714)](https://monkeytype.com/profile/Hackerbolt)
+<p align="left"><a href="https://www.linkedin.com/in/juan-sebastian-diaz-mantilla-90b26b295"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"></a> &nbsp; <a href="https://monkeytype.com/profile/Hackerbolt"><img src="https://img.shields.io/badge/Monkeytype-2C2E3B?style=for-the-badge&logo=monkeytype&logoColor=E2B714"></a></p>

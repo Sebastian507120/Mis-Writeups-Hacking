@@ -14,12 +14,14 @@ Copio la contraseña que sale en la pantalla
 ### PASO 2: Conectar el puerto 
 Usé `nc` para tocar la puerta del servicio.
 - **Sintaxis:** `nc [destino] [puerto]`
-**Comando:** `nc localhost 30000`.
+- **Comando:** `nc localhost 30000`.
 
-PASO 3: El Intercambio Al ejecutar el comando, el cursor se quedó esperando. Pegué la contraseña que copié en el paso 1 y presioné "Enter", Inmediatamente, el servicio me respondió con una línea de texto nueva: "BFM" (La contraseña del nivel 15).
+### PASO 3: El Intercambio
+Al ejecutar el comando, el cursor se quedó esperando. Pegué la contraseña que copié en el **paso 1** y presioné **Enter**, Inmediatamente, el servicio me respondió con una línea de texto nueva: **BFM** (La contraseña del nivel 15).
 
-PASO 4: Guardar y Salir Copié la nueva contraseña y cerré la conexión (usando Ctrl + C o simplemente cerrando la sesión).
+### PASO 4: Guardar y Salir
+Copié la nueva contraseña y cerré la conexión (usando `Ctrl + C` o simplemente cerrando la sesión).
 
-La contraseña del bandit16 en mi caso fue: 8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+La contraseña del **bandit16** en mi caso fue: `8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo`.
 
-~Recordar que las contraseñas con el paso del tiempo cambian 
+> ## Recordar que las contraseñas con el paso del tiempo cambian 
