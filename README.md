@@ -22,4 +22,6 @@ Trabajo bajo una premisa práctica: **investigar, aplicar y documentar** cada pr
 
 📌 **¡Siéntete libre de explorar!** También puedes ver mi progreso de mecanografía o conectar conmigo:
 <p align="left"><a href="https://www.linkedin.com/in/juan-sebastian-diaz-mantilla-90b26b295"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"></a> &nbsp; <a href="https://monkeytype.com/profile/Hackerbolt"><img src="https://img.shields.io/badge/Monkeytype-2C2E3B?style=for-the-badge&logo=monkeytype&logoColor=E2B714"></a></p>
+📌 **¡Siéntete libre de explorar!** También puedes ver mi progreso y velocidad en [Monkeytype](https://monkeytype.com/profile/Hackerbolt). Si quieres contactarme, tienes todos mis datos en mi hoja de vida o puedes conectar conmigo en mi perfil de [LinkedIn](https://www.linkedin.com/in/juan-sebastian-diaz-mantilla-90b26b295). 
+
 📌 **¡Siéntete libre de explorar!** También puedes ver mi progreso y velocidad en [Monkeytype](https://monkeytype.com/profile/Hackerbolt). Si quieres contactarme, tienes todos mis datos en mi hoja de vida o puedes conectar conmigo en mi perfil de [LinkedIn](https://www.linkedin.com/in/juan-sebastian-diaz-mantilla-90b26b295).
