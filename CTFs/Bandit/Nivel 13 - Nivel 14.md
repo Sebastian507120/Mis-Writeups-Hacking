@@ -1,3 +1,8 @@
+---
+tags:
+  - CTF_Bandit
+---
+
 📓 Mis Apuntes: Bandit Nivel 13 → 14
 
 **El Concepto Nuevo:** Llaves  **SSH**  (SSH Keys) Hasta ahora siempre entraba con contraseña. En este nivel aprendí que también puedo entrar con un archivo de llave `sshkey.private`. Es como tener una tarjeta magnética física: **si tienes el archivo, el servidor te deja pasar sin pedirte clave**.

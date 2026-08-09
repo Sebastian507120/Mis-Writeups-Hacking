@@ -1,3 +1,8 @@
+---
+tags:
+  - CTF_Bandit
+---
+
 📓 Mis Apuntes: Bandit Nivel 14 → 15
 
 **El Reto:** El nivel me pedía  que enviara la contraseña actual al puerto **30.000** de mi propia  máquina **( localhost )** par que el servidor me devolviera la siguiente.

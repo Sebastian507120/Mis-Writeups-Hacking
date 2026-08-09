@@ -1,3 +1,8 @@
+---
+tags:
+  - CTF_Bandit
+---
+
 **El reto:** Al igual que en el nivel anterior, debía enviar mi contraseña actual a un puerto **(30001)** para obtener la siguiente. Pero había una trampa: esta vez el servidor usa **cifrado SSL/TLS**.
 
 **La Lección** `(Texto Plano vs Cifrado):` Aprendí que `nc (Netcat)` no sirve aquí porque envía los datos en **texto plano**. El servidor espera un **apretón de manos** seguro `(hanshake)` y certificados de seguridad. Si uso `nc`, el servidor me cierra la conexión porque no hablo su idioma cifrado.
