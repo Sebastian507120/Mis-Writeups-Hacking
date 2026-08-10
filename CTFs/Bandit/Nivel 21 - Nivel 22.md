@@ -1,3 +1,8 @@
+---
+tags:
+  - CTF_Bandit
+---
+
 📓 **Mis Apuntes:** Bandit Nivel 21 → 22 (Explorando Cron)
 
 **El Reto:**

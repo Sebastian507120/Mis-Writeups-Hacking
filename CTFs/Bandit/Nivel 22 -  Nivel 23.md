@@ -1,3 +1,8 @@
+---
+tags:
+  - CTF_Bandit
+---
+
 📓 **Mis Apuntes:** Bandit Nivel 22 → 23
 
 **El Reto:** EL Nombre Matemático Igual que en el nivel anterior, había una tarea programada (**ceon job**) ejecutándose en el fondo. pero esta vez, el script no guardaba la contraseña en un archivo con nombre fijo, El script "calculaba" el nombre del archivo usando una fórmula matemática **hash** basada en el nombre del usuario.

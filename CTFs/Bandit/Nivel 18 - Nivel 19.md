@@ -1,3 +1,8 @@
+---
+tags:
+  - CTF_Bandit
+---
+
 📓 **Mis Apuntes:** Bandit Nivel 18 → 19
 
 **El Reto:** La puerta Giratoria

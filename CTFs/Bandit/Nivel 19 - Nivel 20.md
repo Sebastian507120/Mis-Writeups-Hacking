@@ -1,3 +1,8 @@
+---
+tags:
+  - CTF_Bandit
+---
+
 📓 **Mis Apuntes:** Bandit Nivel 19 → 20 (Método Shell Interactiva)
 
 **El Reto:**

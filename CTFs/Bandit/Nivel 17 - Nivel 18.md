@@ -1,3 +1,8 @@
+---
+tags:
+  - CTF_Bandit
+---
+
 📓 Mis Apuntes: Bandit Nivel 17 → 18
 **El Reto:** 
 En mi directorio **home** había dos archivos: **passwords.old** y **passwords.new**. El resto decía que la contraseña para el siguiente nivel era **la única linea que había cambiado** entre el archivo viejo y el nuevo. Como los archivos eran muy largos, buscar la diferencia a simple vista era imposible.

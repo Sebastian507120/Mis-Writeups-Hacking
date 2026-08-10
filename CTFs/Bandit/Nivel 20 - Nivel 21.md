@@ -1,3 +1,8 @@
+---
+tags:
+  - CTF_Bandit
+---
+
 📓 **Mis Apuntes:** Bandit Nivel 20 → 21
 
 **El Reto:** Conexión Inversa
