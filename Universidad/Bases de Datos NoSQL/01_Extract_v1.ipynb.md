@@ -23,4 +23,74 @@ EL objetivo a lo largo de los cuadernos de la clase es responder a la pregunta: 
 
 # 3. Extracción desde CSV (Accidentes Viales)
 
-En Python, la herramientas estándar para manejar datos estructurados es la librería `pandas`. EL cuaderno usa la función `pd.read_csv()` para descargar y leer el archivo de accidentes directamente desde una URL.
+Para trabajar con datos estructurados y hacer peticiones a internet en Python, el profesor inicia importando las dos librerías fundamentales para  el proceso ETL:
+
+```
+impoert pandas as pd
+import requests
+```
+
+
+## 3.1 Lectura básica y Exploración Inicial 
+Se carga el dataset de accidentes viales de **Leeds (2014)** directamente desde una **URL** usando la función `read_csv` de pandas.
+
+```
+# Defininr la URL del archivo
+url_csv = "https://raw.githubusercontent.com/damianoc90/Road-accidents-analysis/master/dataset.csv"
+
+
+# Leer el CSV y guardarlo en un DataFrame llamado `df_cdv`
+df_csv = pd.read_csv(url_csv)
+
+# Mostrar la cantidad de filas y columnas
+Print(f"Filas: {df_csv.shape[0]}, Columnas: {df_csv.shape[1]}")
+
+# Mostrar las primeras 5 filas para ver cómo lucen los datos 
+df_csv.head()
+``` 
+
+Una vez cargado, el profesor utiliza comandos de exploración para hacerle una "radiografía" a los datos: 
+
+```
+# 1. Muestra la estructura general: cantidad de datos no nulos y el tipo de dato por columna 
+df_csv.info()
+
+# 2. Genera estadísticas matemáticas (promedio, min, max, desviación) de las columnas numéricas
+df_csv.describre()
+
+# 3. Imprime únicamente los tipos de datos de cada columna (int64 para números, object para texto)
+print(df_csv.dtypes)
+
+# 4. Cuenta cuántos valores nulos (vacíos) hay exactamente en cada columna
+print(df_csv.isnull().sum())
+```
+
+## 3.2 CSV con variaciones reales (Manejo de Errores)
+En la vida real, los **CSV** suelen fallar al leerse. El profesor explicó cómo solucionar los tres problemas más comunes mediantes código: 
+
+## Caso 1: Problemas de codificación (Caracteres extraños, tildes o ñ)
+Si el archivo falla por el idioma, se usa un bloque `try-except` para intentar leerlo con una codificación estándar **(utf-8)** y, si falla, usar otra **(latin-1):** 
+
+```
+try: 
+	df_enc = pd.read_csv(url_csv, encoding='utf-8')
+	print("Lectura con utf-8 exitosa")
+except UnicodeDecodeError:
+	df_enc = pd.read_csv(url_csv, encoding='latin-1')
+	print("Lectura con latin-1 exitosa")
+```
+
+## Caso 2: Separador diferente (Ej:  punto y coma en lugar de coma)
+Si el archivo no está separado por comas, todo se cargará en una sola columna. Para arreglarlo, sele especifica a pandas el separador exacto usando el parámetro `sep`: 
+
+```
+# Se lee especificando que el separador es un punto y coma
+df_sep = pd.read_csv(StringIO(csv_con_punto_coma), sep=';')
+```
+
+## Caso 3: FIlas de encabezado mal ubicadas (Metadata)
+Si el archivo tiene texto descriptivo en las primeras filas antes de los nombres reales de las columnas, se ignoran esas filas basura usando el parámetro `skiprows`
+
+```
+# Se dalta las primeras 2 filas del archivo al leerlo 
+```
