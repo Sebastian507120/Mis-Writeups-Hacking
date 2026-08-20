@@ -88,9 +88,108 @@ Si el archivo no está separado por comas, todo se cargará en una sola columna.
 df_sep = pd.read_csv(StringIO(csv_con_punto_coma), sep=';')
 ```
 
-## Caso 3: FIlas de encabezado mal ubicadas (Metadata)
+## Caso 3: Filas de encabezado mal ubicadas (Metadata)
 Si el archivo tiene texto descriptivo en las primeras filas antes de los nombres reales de las columnas, se ignoran esas filas basura usando el parámetro `skiprows`
 
 ```
-# Se dalta las primeras 2 filas del archivo al leerlo 
+# Se salta las primeras 2 filas del archivo al leerlo 
+
+df_header = pd.read_csv(StringIO(csv_con_header_raro), skiprows=2)
 ```
+
+# 4. Extracción desde API (Datos del Clima)
+
+Para obtener los datos del clima, se consulta la API de Open-Meteo mediante una petición GET. En lugar de descargar un archivo, se le envían parámetros (latitud, longitud, fechas) para recibir la información exacta.
+
+## 4.1 Construyendo la petición y analizando el JSON
+
+```
+# URL base de la API
+url_api = "https://archive-api.open-meteo.com/v1/archive"
+
+# Diccionario con los parámetros obligatorios de la consulta
+params = {
+	"latitude": 53.8008,
+	"longitude": -1.5491,
+	"start_date": "2014-01-01"
+	"end_date": "2014-12-31"
+	"daily": "temperature_2m_max,temperature_2m_min,precipitation_sum,weathercode",
+	"timezone": "Europe/London"
+}
+
+# Ejecutar la petición
+response = requests.get(url_api, params=params)
+
+# Extraer la respuesta en formato JSON (diccionario de Python)
+data_json = response.json()
+
+# Inspeccionar las claves principales del JSON para saber dónde están los datos útiles
+print(list(data_json.keys()))
+# Salida esperada: ['latitude', 'longitude', ..., 'daily']
+
+# Mirar qué hay dentro de la clave 'daily'
+print(list(data_json['daily'].keys)))
+# Salida esperada: ['time', 'temperature_2m_max', ...]
+```
+
+
+## 4.2 De JSON  a DataFrame
+Al ver que los datos importantes están agrupados dentro de la clave `daily`, se convierte esa sección específica directamente en una tabla estructurada:
+
+```
+# Convertimos el bloque 'daily' a un DataFrame de pandas
+df_api = pd.DataFrame(data_json['daily'])
+
+print(f"Filas: {df_api.shape[0]}, Columnas: {df_api.shape[1]}")
+df_api.head()
+```
+
+*(Luego de esto, el profesor también le aplica a este DataFrame los mismos comandos exploratorios `.info()`, `.describe()` y `.isnull().sum()` para verificar su estado).*
+
+# 5. El Diagnóstico (Preparando el terreno para Transformar)
+
+### 1. Buscar si comparten alguna columna por nombre exacto:
+
+```
+# Se normalizan los nomres de las columnas (minúsculas y sin espacios) y se busca la intersección
+cols_csv = set(df_csv.columns.str.lower().str.strip())
+cols_api = set(df_api.columns.str.lower().str.strip())
+
+comunes = cols_csv.intersection(cols_api)
+print(f"Columnas en común (normalizadas): {comunes}")
+# Resultado: set() -> No hay ninguna columna que se llame igual en ambos lados.
+ 
+```
+
+### 2. Identificar manualmente las columnas de fecha (ya que serán nuestra clave de unión)
+
+```
+# Buscar en el CVS cualquier columna que contenga las palabras 'fecha', 'date', o 'tiempo'
+for col in df_csv.columns:
+	if 'fecha' in col.lower() or 'date' in col.lower() or 'tiempo' in col.lower():
+		print(f"CVS - posible columna de fecha: '{col}' | tipo: {df_csv[col].dtype}")
+		
+# Hace lo mismo para la API
+for col in df_api.columns:
+	if 'fecha' in col.lower() or 'date' in col.lower() or 'tiempo' in col.lower():
+		print(f"API - posible columna de fecha: '{col}' | tipo: {df_api[col].dtype}")
+```
+
+- *Hallazgo: En el CVS la fecha se llama `Accident Date` y en la API se llama `time`. Ambas son de tipo texto (`object`). 
+
+# Resumen de problemas a resolver en la Transformación:
+
+El profesor documenta todo en un diccionario final detallando los problemas a resolver en el siguiente cuaderno:
+
+- **En df_csv:**
+	- La fecha `Accident Date` es texto (`object`), hay que convertirla a fecha real (`datatime`).
+	- La hora `Time (24hr)` es numérica, hay que darle formato `HH:MM`
+	- Variables como el clima vienen en códigos numéricos, requieren etiquetas.
+	- Hay un registro por víctima, generando accidentes duplicados.
+- **En df_api:**
+	- La fecha `time` es texto (`object`), hay que pasarla a `datatime`.
+	- `weathercode` es numérico, necesita etiquetas descriptivas.
+- **Para el Cruce (Merge):**
+	- No hay columnas con el mismo nombre; habrá que normalizar la fecha en ambos para unirlos.
+	- La granularidad es distinta (el CVS tiene varios filas por día, la API solo una); habrá que agrupar el CSV por día antes del cruce.
+
