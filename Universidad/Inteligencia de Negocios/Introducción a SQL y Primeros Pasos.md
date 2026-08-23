@@ -96,12 +96,23 @@ CREATE TABLE estudiantes (
 );
 ```
 
-![[Pasted image 20260817223631.png|560]]
+![[Introducción a SQL y Primeros Pasos-20260822213308.png]]
 
 ### Verificar la estructura  creada
 
-![[Pasted image 20260817224002.png]]
+```
+DESCRIBE estudiantes;
+```
 
+![[Introducción a SQL y Primeros Pasos-20260822213321.png]]
+
+### Verificar todas las tablas creadas por el usuario actual 
+
+```
+SELECT table_name FROM user_tables;
+```
+
+![[Introducción a SQL y Primeros Pasos-20260822232334.png|481]]
 ## Paso 5.2: Insertar Datos (DML)
 
 ```
@@ -123,21 +134,34 @@ VALUES (1003, 'Carlos', 'Fernandez', 'Psicología', 10);
 ```
 -- Listar toda la información de la tabla
 SELECT * FROM estudiantes;
+```
 
+![[Introducción a SQL y Primeros Pasos-20260822235734.png]]
+
+```
 -- Filtrar registros específicos
 SELECT nombre, apellido, carrera
 FROM estudiantes
 WHERE semestre >= 8;
 ```
 
+![[Introducción a SQL y Primeros Pasos-20260822234705.png|481]]
 ## Paso 5.4: Modificar y Eliminar Registros (DML)
+
+### Modificar
 
 ```
 -- Actualizar un dato específico
 UPDATE estudiantes
 SET semestre = 10
 WHERE id_estudiante = 1001;
+```
 
+![[Introducción a SQL y Primeros Pasos-20260822235623.png|384]]
+
+### Eliminar 
+
+```
 -- Eliminar un registro
 DELETE FROM estudiantes
 WHERE id_estudiante = 1002;
@@ -145,3 +169,5 @@ WHERE id_estudiante = 1002;
 -- Confirmar los cambios
 COMMIT;
 ```
+
+![[Introducción a SQL y Primeros Pasos-20260823000056.png|383]]
