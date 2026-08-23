@@ -96,7 +96,7 @@ CREATE TABLE estudiantes (
 );
 ```
 
-![[Introducción a SQL y Primeros Pasos-20260822213308.png]]
+![](../../Capturas/Introducción%20a%20SQL%20y%20Primeros%20Pasos-20260823012038.png)
 
 ### Verificar la estructura  creada
 
@@ -104,7 +104,7 @@ CREATE TABLE estudiantes (
 DESCRIBE estudiantes;
 ```
 
-![[Introducción a SQL y Primeros Pasos-20260822213321.png]]
+![700](../../Capturas/Introducción%20a%20SQL%20y%20Primeros%20Pasos-20260823012112.png)
 
 ### Verificar todas las tablas creadas por el usuario actual 
 
@@ -112,7 +112,7 @@ DESCRIBE estudiantes;
 SELECT table_name FROM user_tables;
 ```
 
-![[Introducción a SQL y Primeros Pasos-20260822232334.png|481]]
+![](../../Capturas/Introducción%20a%20SQL%20y%20Primeros%20Pasos-20260823012202.png)
 ## Paso 5.2: Insertar Datos (DML)
 
 ```
@@ -127,7 +127,7 @@ VALUES (1003, 'Carlos', 'Fernandez', 'Psicología', 10);
 ```
 
 
-![[Pasted image 20260817224715.png]]
+![611](../../Capturas/Introducción%20a%20SQL%20y%20Primeros%20Pasos-20260823012414.png)
 
 ## Paso 5.3: Consultar Datos (DQL)
 
@@ -136,7 +136,7 @@ VALUES (1003, 'Carlos', 'Fernandez', 'Psicología', 10);
 SELECT * FROM estudiantes;
 ```
 
-![[Introducción a SQL y Primeros Pasos-20260822235734.png]]
+![](../../Capturas/Introducción%20a%20SQL%20y%20Primeros%20Pasos-20260823012433.png)
 
 ```
 -- Filtrar registros específicos
@@ -145,7 +145,7 @@ FROM estudiantes
 WHERE semestre >= 8;
 ```
 
-![[Introducción a SQL y Primeros Pasos-20260822234705.png|481]]
+![517](../../Capturas/Introducción%20a%20SQL%20y%20Primeros%20Pasos-20260823012447.png)
 ## Paso 5.4: Modificar y Eliminar Registros (DML)
 
 ### Modificar
@@ -157,7 +157,7 @@ SET semestre = 10
 WHERE id_estudiante = 1001;
 ```
 
-![[Introducción a SQL y Primeros Pasos-20260822235623.png|384]]
+![551](../../Capturas/Introducción%20a%20SQL%20y%20Primeros%20Pasos-20260823012505.png)
 
 ### Eliminar 
 
@@ -170,4 +170,4 @@ WHERE id_estudiante = 1002;
 COMMIT;
 ```
 
-![[Introducción a SQL y Primeros Pasos-20260823000056.png|383]]
+![458](../../Capturas/Introducción%20a%20SQL%20y%20Primeros%20Pasos-20260823012523.png)
